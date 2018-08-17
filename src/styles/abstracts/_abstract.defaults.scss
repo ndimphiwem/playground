@@ -12,14 +12,14 @@ $prod: "https://cms1.gmgamingsystems.com";
 $env: if($debug, $dev, $prod);
 
 /** Breakpoints **/
-$small: 0;
-$medium: 40em;
-$large: 64em;
+$mobile: 44.9375em !default;
+$tablet: 45em !default;
+$desktop: 63.9375em !default;
 
-$media-queries: (
-  mobile: $small,
-  tablet: $medium,
-  desktop: $large
+$breakpoints: (
+  mobile: 'screen and (max-width: #{$mobile})',
+  tablet: 'screen and (min-width: #{$tablet})',
+  desktop: 'screen and (max-width: #{$desktop})'
 );
 
 /** Grid **/

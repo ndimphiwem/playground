@@ -1,0 +1,39 @@
+/** Base Font Defaults **/
+/** Fonts **/
+$google-font: "https://fonts.googleapis.com/";
+@import url("#{$google-font}css?family=Open+Sans:400,600,700|Roboto+Condensed:400,700");
+
+$font__family: "Open Sans", sans-serif !default;
+$font__render-mode: optimizeLegibility !default;
+$font__size: 1rem;
+$font__line-height: 1.2;
+$font__weight: 400;
+$font__weight--bold: $font__weight + 200;
+$font__weight--bolder: $font__weight--bold + 100;
+
+$font-size__settings: (
+  'xs': (
+    font-size: .75rem, // 12px
+    line-height: $font__line-height
+  ),
+  'sm': (
+    font-size: .875rem, // 14px
+    line-height: $font__line-height
+  ),
+  'base': (
+    font-size: 1rem, // 16px
+    line-height: $font__line-height
+  ),
+  'md': (
+    font-size: 1.125rem, // 18px
+    line-height: $font__line-height * 2
+  ),
+  'lg': (
+    font-size: 1.25rem, // 20px
+    line-height: $font__line-height * 2
+  ),
+  'xl': (
+    font-size: 1.5rem, // 24px
+    line-height: $font__line-height * 2
+  )
+);

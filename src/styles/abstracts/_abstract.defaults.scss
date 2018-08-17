@@ -1,0 +1,52 @@
+/** Variable Defaults **/
+
+/** Theme Namespace **/
+$theme: 'vegas';
+
+/** Debug Mode **/
+$debug: true;
+
+/** URLs **/
+$dev: "https://cms1.gmgamingsystems.dev.com";
+$prod: "https://cms1.gmgamingsystems.com";
+$env: if($debug, $dev, $prod);
+
+/** Breakpoints **/
+$small: 0;
+$medium: 40em;
+$large: 64em;
+
+$media-queries: (
+  mobile: $small,
+  tablet: $medium,
+  desktop: $large
+);
+
+/** Grid **/
+$gutter: 2% !default;
+$grid: (
+col-one,
+col-two,
+col-three,
+col-four,
+col-five,
+col-six,
+col-seven,
+col-eight,
+col-nine,
+col-ten,
+col-eleven,
+col-twelve
+);
+
+/** Container **/
+$container__width: 1700px;
+$container__width--large: 1800px;
+
+/** Animation **/
+$b-animation__duration: 0.3s;
+$b-animation__timming: ease-in !default;
+
+/** Base Font Size / Line Height **/
+$font__size: 1rem;
+$font__line-height: 1.20 * $font__size;

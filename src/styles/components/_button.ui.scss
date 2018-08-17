@@ -1,0 +1,31 @@
+// @COMPONENT
+//
+
+$theme-colors: (
+  primary: '#aaabbb',
+  secondary: '#aaabbb',
+  default: '#aaabbb',
+  warning: '#aaabbb',
+  danger: '#aaabbb',
+  skewed: '#aaabbb',
+);
+
+.t-#{$theme} {
+  .c-btn {
+    @include mixin;
+  }
+
+  &--full {
+    width: 100%;
+    display: block;
+    clear: both;
+  }
+
+  @each $color, $value in $theme-colors {
+    &--#{$color} {
+      @include button-variant($value, $value);
+    }
+  }
+
+  // @include make-button($btnName, $bg-color, $txt-color);
+}

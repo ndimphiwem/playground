@@ -1,0 +1,14 @@
+// @MIXIN
+// 
+@mixin --breakpoint($device) {
+  $this: map-get($media-queries, $device);
+  @if($device == 'mobile') {
+    @media screen and (max-width: #{$this}) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: #{$this}) {
+      @content;
+    }
+  }
+}

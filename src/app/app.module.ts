@@ -7,6 +7,11 @@ import { GridComponent } from './components/grid/grid.component';
 import { DefaultComponent } from './components/default/default.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
+import { TypographyComponent } from './components/typography/typography.component';
+import { FormsComponent } from './components/forms/forms.component';
+import { ModalsComponent } from './components/modals/modals.component';
+import { ImagesComponent } from './components/images/images.component';
+import { UtilitiesComponent } from './components/utilities/utilities.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +19,12 @@ import { ButtonsComponent } from './components/buttons/buttons.component';
     GridComponent,
     DefaultComponent,
     HeaderComponent,
-    ButtonsComponent
+    ButtonsComponent,
+    TypographyComponent,
+    FormsComponent,
+    ModalsComponent,
+    ImagesComponent,
+    UtilitiesComponent
   ],
   imports: [
     BrowserModule,

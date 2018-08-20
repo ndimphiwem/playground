@@ -1,3 +1,7 @@
+/** Typography Utility 
+* Naming Convention: Prefix With U
+**/
+
 $alignments:(
   'centered': 'center', 
   'justified': 'justify', 
@@ -6,30 +10,30 @@ $alignments:(
 );
 
 @each $alignment, $text-align in $alignments {
-  .has-text-#{$alignment} {
+  .u-has-text--#{$alignment} {
     text-align: #{$text-align} !important;
   }
 
   @include --breakpoint(mobile) {
-    .has-text-#{$alignment}--mobile {
+    .u-has-text--#{$alignment}__mobile {
       text-align: #{$text-align} !important;
     }
   }
 
   @include --breakpoint(tablet) {
-    .has-text-#{$alignment}--tablet {
+    .u-has-text--#{$alignment}__tablet {
       text-align: #{$text-align} !important;
     }
   }
 
   @include --breakpoint(desktop) {
-    .has-text-#{$alignment}--desktop {
+    .u-has-text--#{$alignment}__desktop {
       text-align: #{$text-align} !important;
     }
   }
 }
 
-.is {
+.u-is {
   &--uppercase {
     text-transform: uppercase !important;
   }
@@ -48,7 +52,7 @@ $alignments:(
 
 }
 
-.has-font {
+.u-has-font {
   &--normal {
     font-weight: normal;
   }

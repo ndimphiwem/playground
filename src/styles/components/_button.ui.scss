@@ -1,9 +1,33 @@
 // @COMPONENT
-//
+
+/** Button Sizes **/
+$button-sizes: (
+  sm: 7px 12px,
+  md: 14px 14px,
+  lg:  14px 24px,
+  xtra: 16px 30px
+) !default;
 
  /** Button Block  **/
 .c-btn {
  @extend %button;
+
+  @mixin make-outline(
+    $color, 
+    $active-background: $color, 
+    $active-border: $color
+  ) {
+  color: $color;
+  background-color: transparent;
+  background-image: none;
+  border-color: $color;
+
+  &:hover {
+    color: $white-color;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+ }
 
   /** Button Elements  **/
   &__default {
@@ -30,6 +54,14 @@
       border-color: $secondary-color;
       background-color: $white-color;
       color: $secondary-color;
+    }
+
+    &--outline {
+      @include make-outline(
+       $secondary-color, 
+       $active-background: $secondary-color, 
+       $active-border: $secondary-color
+      );
     }
   }
 
@@ -142,21 +174,21 @@
 
   // Make a sizes map for this
   &--sm {
-    // padding: map-get($button-sizes, sm);
+    padding: map-get($button-sizes, sm);
     font-size: text-scale('sm');
   }
 
   &--md {
-    // padding: map-get($button-sizes, md);
+    padding: map-get($button-sizes, md);
     font-size: text-scale('md');
   }
 
   &--lg {
-   //  padding: map-get($button-sizes, lg);
+    padding: map-get($button-sizes, lg);
     font-size: text-scale('lg');
 
     @include --breakpoint(tablet) {
-      padding: 16px 30px;
+      padding: map-get($button-sizes, xtra);
       font-size: text-scale('xl');
     }
   }
@@ -168,10 +200,6 @@
   &--expanded {
     display: block;
     width: 100%;
-  }
-
-  &--deposit {
-    margin: 0 0 1em 0.5em;
   }
 
   &--clear {

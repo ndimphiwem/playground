@@ -1,0 +1,71 @@
+/* Form */
+
+.input_text,
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="color"],
+select,
+textarea {
+	font-family: $font__family;
+	background-color: $white-color;
+	border: 1px solid $b-dark-grey;
+	color: $b-dark-grey;
+	border-radius: $border-radi;
+	display: block;
+	font-size: $size-5;
+	line-height: $font__line-height;
+	height: 46px;
+	margin: 0 0 20px 0;
+	padding: 0 10px;
+	width: 100%;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	cursor: pointer;
+
+	&::-ms-expand {
+		display: none;
+	}
+}
+
+textarea {
+	font-size: $size-5;
+	min-height: 150px;
+	padding: 10px;
+	line-height: $font__line-height;
+}
+
+label {
+	display: block;
+
+	input[type="radio"] + &,
+	input[type="checkbox"] + & {
+		display: inline-block;
+	}
+}
+
+
+::-webkit-input-placeholder {
+	color: $b-dark-grey;
+}
+
+:-moz-placeholder {
+	color: $b-dark-grey;
+}
+
+::-moz-placeholder {
+	color: $b-dark-grey;
+}
+
+:-ms-input-placeholder {
+	color: $b-dark-grey;
+}

@@ -8,6 +8,7 @@ import { FormsComponent } from './components/forms/forms.component';
 import { ModalsComponent } from './components/modals/modals.component';
 import { ImagesComponent } from './components/images/images.component';
 import { UtilitiesComponent } from './components/utilities/utilities.component';
+import { TabsComponent } from './components/tabs/tabs.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: 'modals',
     component: ModalsComponent
+  },
+  {
+    path: 'tabs',
+    component: TabsComponent
   },
   {
     path: 'utilities',

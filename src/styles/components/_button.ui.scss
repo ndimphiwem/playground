@@ -1,31 +1,184 @@
 // @COMPONENT
 //
 
-$theme-colors: (
-  primary: '#aaabbb',
-  secondary: '#aaabbb',
-  default: '#aaabbb',
-  warning: '#aaabbb',
-  danger: '#aaabbb',
-  skewed: '#aaabbb',
-);
+ /** Button Block  **/
+.c-btn {
+ @extend %button;
 
-.t-#{$theme} {
-  .c-btn {
-    @include mixin;
-  }
-
-  &--full {
-    width: 100%;
-    display: block;
-    clear: both;
-  }
-
-  @each $color, $value in $theme-colors {
-    &--#{$color} {
-      @include button-variant($value, $value);
+  /** Button Elements  **/
+  &__default {
+    background-color: $body-color;
+    @include hover {
+      border-color: $body-color;
+      background-color: $white-color;
+      color: $body-color;
     }
   }
 
-  // @include make-button($btnName, $bg-color, $txt-color);
+  &__primary {
+    background-color: $primary-color;
+    @include hover {
+      border-color: $primary-color;
+      background-color: $white-color;
+      color: $primary-color;
+    }
+  }
+
+  &__secondary {
+    background-color: $secondary-color;
+    @include hover {
+      border-color: $secondary-color;
+      background-color: $white-color;
+      color: $secondary-color;
+    }
+  }
+
+  &__success {
+    background-color: $success-color;
+    @include hover {
+      border-color: $success-color;
+      background-color: $white-color;
+      color: $success-color;
+    }
+  }
+
+  &__warning {
+    background-color: $warning-color;
+    @include hover {
+      border-color: $warning-color;
+      background-color: $white-color;
+      color: $warning-color;
+    }
+  }
+
+  &__danger {
+    background-color: $danger-color;
+    @include hover {
+      border-color: $danger-color;
+      background-color: $white-color;
+      color: $danger-color;
+    }
+  }
+
+  // Have a look at this
+  &__link {
+    text-decoration: none;
+    border: 0;
+    background: none;
+
+    &:hover {
+        background: none;
+        color: $body-color;
+        border: 0;
+        text-decoration: underline;
+    }
+
+    &:focus {
+        color: $white-color;
+    }
+  }
+
+  &__input {
+    top: -30px;
+    float: right;
+    padding: 3px 16px;
+    margin-right: 0.2em;
+
+    &--absolute {
+      position: absolute;
+      right: 3px;
+      top: 3px;
+      height: 27px;
+      padding: 0px 5px;
+    }
+  }
+
+  // Look at how to better implement this
+  &__skewed {
+    position: relative;
+    background-color: $primary-color;
+    border: 0;
+    padding: 7px 20px;
+    text-align: center;
+    color: $white-color;
+    margin-left: 30px;
+    cursor: pointer;
+    z-index: 2;
+
+    &:before {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -15px;
+      display: block;
+      width: 40%;
+      -webkit-transform: skew(14.5deg);
+      -ms-transform: skew(14.5deg);
+      transform: skew(14.5deg);
+    }
+  }
+
+  /** Button Modifiers  **/
+  &--full {
+    display: block;
+    clear: both;
+    width: 100%;
+  }
+
+  &--no-padding {
+    padding: 0;
+  }
+
+  &--opposite {
+    margin: 1rem 0 0 0;
+
+    &:before {
+      right: -15px;
+      left: auto;
+    }
+  }
+
+  // Make a sizes map for this
+  &--sm {
+    // padding: map-get($button-sizes, sm);
+    font-size: text-scale('sm');
+  }
+
+  &--md {
+    // padding: map-get($button-sizes, md);
+    font-size: text-scale('md');
+  }
+
+  &--lg {
+   //  padding: map-get($button-sizes, lg);
+    font-size: text-scale('lg');
+
+    @include --breakpoint(tablet) {
+      padding: 16px 30px;
+      font-size: text-scale('xl');
+    }
+  }
+
+  &--squared {
+    border-radius: 0px;
+  }
+
+  &--expanded {
+    display: block;
+    width: 100%;
+  }
+
+  &--deposit {
+    margin: 0 0 1em 0.5em;
+  }
+
+  &--clear {
+    border: 0;
+    background: none;
+    border-radius: 0;
+    cursor: pointer;
+    padding: 7px 7px 0 0;
+  }
 }

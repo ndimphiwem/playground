@@ -20,7 +20,7 @@ $breakpoints: (
   mobile: 'screen and (max-width: #{$mobile})',
   tablet: 'screen and (min-width: #{$tablet})',
   desktop: 'screen and (max-width: #{$desktop})'
-);
+) !default;
 
 /** Grid **/
 $gutter: 2% !default;

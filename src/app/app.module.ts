@@ -12,6 +12,7 @@ import { FormsComponent } from './components/forms/forms.component';
 import { ModalsComponent } from './components/modals/modals.component';
 import { ImagesComponent } from './components/images/images.component';
 import { UtilitiesComponent } from './components/utilities/utilities.component';
+import { TabsComponent } from './components/tabs/tabs.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UtilitiesComponent } from './components/utilities/utilities.component';
     FormsComponent,
     ModalsComponent,
     ImagesComponent,
-    UtilitiesComponent
+    UtilitiesComponent,
+    TabsComponent
   ],
   imports: [
     BrowserModule,

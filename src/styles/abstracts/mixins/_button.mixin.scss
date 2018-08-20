@@ -1,0 +1,27 @@
+%button {
+  padding: 8px 8px;
+  font-size: $font__size;
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 3px;
+  position: relative;
+  vertical-align: middle;
+  text-decoration: none;
+  transition: .2s ease-out;
+  transition-property: background-color, color;
+  border: 2px solid transparent;
+  font-weight: $font__weight;
+
+  &:focus {
+      outline: none;
+  }
+}
+
+@mixin hover() {
+  &:hover {
+      @content;
+  }
+}
+

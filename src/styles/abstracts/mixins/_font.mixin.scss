@@ -1,0 +1,21 @@
+// Font Mixin
+$font-path: 'https://cdn.gmgamingsystems.com/Global/fonts/interface/';
+
+/** Example Usage: 
+* @include fontFace('InterFaceCorp-Regular')
+**/
+@mixin fontFace($font-family) {
+  @font-face {
+    $this: #{$font-path}#{$font-family};
+    font: {
+      family: $font-family;
+      weight: normal;
+      style: normal;
+    }
+    src: url('#{$this}.eot'); //IE9 Compat Modes
+    src: url('#{$this}.eot?#iefix') format('embedded-opentype'), //IE6-IE8
+         url('#{$this}.woff') format('woff'), //Modern Browsers
+         url('#{$this}.ttf') format('truetype'), //Safari, Android, iOS
+         url('#{$this}.svg##{$font-family}') format('svg'); //Old iOS devices
+  }
+}

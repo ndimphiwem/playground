@@ -1,0 +1,71 @@
+/* Typography */
+* {
+	font-family: $font__family;
+	font-weight: $font__weight;
+	line-height: $font__line-height;
+	color: $black-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 5px 0;
+	font-weight: normal;
+	font-style: normal;
+	line-height: $font__line-height;
+	text-transform: none;
+	text-rendering: $font__render-mode;
+}
+
+h1 {
+	font-size: $size-6;
+
+	@include --breakpoint(tablet) {
+		font-size: $size-6 + 0.2;
+	}
+}
+
+h2 {
+	font-size: $size-5;
+
+	@include --breakpoint(tablet) {
+		font-size: $size-6 - 0.2;
+	}
+}
+
+h3 {
+	font-size: $size-5;
+
+	@include --breakpoint(tablet) {
+		font-size: $size-5;
+	}
+}
+
+h4 {
+	font-size: $size-3;
+
+	@include --breakpoint(tablet) {
+		font-size: $size-3 + 0.1;
+	}
+}
+
+h5 {
+	font-size: $size-3;
+
+	@include --breakpoint(tablet) {
+		font-size: $size-3;
+	}
+}
+
+h6 {
+	font-size: $size-3;
+}
+
+blockquote {
+	margin: 28px 0 28px 2px;
+	padding: 0 0 0 28px;
+	border-left: 6px solid $primary-color;
+}

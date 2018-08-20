@@ -22,26 +22,10 @@ $breakpoints: (
   desktop: 'screen and (max-width: #{$desktop})'
 );
 
-/** Grid **/
-$gutter: 2% !default;
-$grid: (
-col-one,
-col-two,
-col-three,
-col-four,
-col-five,
-col-six,
-col-seven,
-col-eight,
-col-nine,
-col-ten,
-col-eleven,
-col-twelve
-);
-
-/** Container **/
-$container__width: 1700px;
-$container__width--large: 1800px;
+/** Grid framework defaults**/
+$enable-grid-classes: true !default;
+$gutter-width: 30px !default;
+$grid-columns: 12 !default;
 
 /** Animation **/
 $b-animation__duration: 0.3s;

@@ -1,0 +1,40 @@
+/// Grid system
+//
+// Generate semantic grid columns and row styles
+@mixin make-row() {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: ($gutter-width / -2);
+    margin-left: ($gutter-width / -2);
+}
+
+@mixin make-col($size, $columns: $grid-columns) {
+    flex: 0 0 percentage($size / $columns); // Add a `max-width` to ensure content within each column does not blow out
+    // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+    // do not appear to require this.
+    max-width: percentage($size / $columns);
+    @if($debug) {
+        border: 1px dotted red;
+    }
+}
+
+@mixin make-grid-columns($columns: $grid-columns, $gutter: $gutter-width) {
+  // Common properties for all breakpoints
+  %grid-column {
+    position: relative;
+    width: 100%;
+    min-height: 1px; // Prevent columns from collapsing when empty
+    padding-right: ($gutter / 2);
+    padding-left: ($gutter / 2);
+    @if($debug) {
+      border: 0.5px dotted red;
+    }
+  }
+
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      @extend %grid-column;
+    }
+  }
+}

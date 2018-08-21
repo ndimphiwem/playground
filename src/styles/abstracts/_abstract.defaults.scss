@@ -4,7 +4,7 @@
 $theme: 'vegas';
 
 /** Debug Mode **/
-$debug: true;
+$debug: false;
 
 /** URLs **/
 $dev: "https://cms1.gmgamingsystems.dev.com";
@@ -42,3 +42,5 @@ $b-animation__timming: ease-in !default;
 /** Base Font Size / Line Height **/
 $font__size: 1rem;
 $font__line-height: 1.20 * $font__size;
+
+$border-radi: 4px;

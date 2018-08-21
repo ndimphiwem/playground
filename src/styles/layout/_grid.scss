@@ -2,7 +2,7 @@
     .row {
       @include make-row();
       @if($debug) {
-        border: 1px dotted red;
+        border: 1px dotted $danger-color;
       }
     }
   
@@ -23,4 +23,41 @@
   
 @if $enable-grid-classes {
   @include make-grid-columns();
+}
+
+//Grid vertical and horizontal alignment helper classes
+.align_top {
+  align-items: flex-start;
+}
+
+.align_center {
+  align-items: center;
+}
+
+.align_bottom {
+  align-items: flex-end
+}
+
+.justify_left {
+  justify-content: flex-start;
+}
+
+.justify_right {
+  justify-content: flex-end;
+}
+
+.justify_center {
+  justify-content: center
+}
+
+.space_around {
+  justify-content: space-around;
+}
+
+.space_between {
+  justify-content: space-between;
+}
+
+.space_even {
+  justify-content: space-evenly;
 }

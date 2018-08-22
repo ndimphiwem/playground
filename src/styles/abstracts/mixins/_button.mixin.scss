@@ -25,3 +25,8 @@
   }
 }
 
+@mixin focus() {
+  &:focus {
+    @content;
+  }
+}

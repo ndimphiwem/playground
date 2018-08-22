@@ -1,0 +1,9 @@
+/** Example Usage: 
+* position(0px, auto, 0px, -9px)
+**/
+@mixin position($top, $right: $top, $bottom: $top, $left: $right) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

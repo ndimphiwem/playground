@@ -31,8 +31,6 @@ Bootstrap, and stuff like that in here.
 
 ### Furthur Reading and Material
 
-1. [ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
+1. [7-1 pattern](https://medium.freecodecamp.org/how-to-get-better-at-writing-css-a1732c32a72f)
 2. [BEM](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)
-3. [ITCSS](https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528)
-4. [7-1 pattern](https://medium.freecodecamp.org/how-to-get-better-at-writing-css-a1732c32a72f)
-5. [Sass Guidlines](https://sass-guidelin.es/)
+3. [Sass Guidlines](https://sass-guidelin.es/)

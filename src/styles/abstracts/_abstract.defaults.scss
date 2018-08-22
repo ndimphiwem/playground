@@ -11,7 +11,6 @@ $dev: "https://cms1.gmgamingsystems.dev.com";
 $prod: "https://cms1.gmgamingsystems.com";
 $env: if($debug, $dev, $prod);
 
-/** Breakpoints **/
 $mobile: 44.9375em !default;
 $tablet: 45em !default;
 $desktop: 63.9375em !default;
@@ -20,6 +19,15 @@ $breakpoints: (
   mobile: 'screen and (max-width: #{$mobile})',
   tablet: 'screen and (min-width: #{$tablet})',
   desktop: 'screen and (max-width: #{$desktop})'
+);
+
+/** Breakpoints **/
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
 ) !default;
 
 /** Grid framework defaults**/

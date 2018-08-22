@@ -4,22 +4,19 @@
 @mixin make-row() {
     box-sizing: border-box;
     display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
     flex-wrap: wrap;
-    margin-right: ($gutter-width / -2);
-    margin-left: ($gutter-width / -2);
+    margin-right: 0;
+    margin-left: 0;
 }
 
 @mixin make-col($size, $columns: $grid-columns) {
-    flex: 0 0 percentage($size / $columns); // Add a `max-width` to ensure content within each column does not blow out
-    // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
-    // do not appear to require this.
+    flex-basis: percentage($size / $columns); 
     max-width: percentage($size / $columns);
-    @if($debug) {
-        border: 1px dotted red;
-    }
 }
 
-@mixin make-grid-columns($columns: $grid-columns, $gutter: $gutter-width) {
+@mixin make-grid-columns($columns: $grid-columns, $gutter: $gutter-width, $breakpoints: $grid-breakpoints) {
   // Common properties for all breakpoints
   %grid-column {
     position: relative;
@@ -28,13 +25,51 @@
     padding-right: ($gutter / 2);
     padding-left: ($gutter / 2);
     @if($debug) {
-      border: 0.5px dotted red;
+      border: 0.5px dotted $danger-color;
     }
   }
 
-  @for $i from 1 through $columns {
-    .col-#{$i} {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    // Allow columns to stretch full width below their breakpoints
+    @for $i from 1 through $columns {
+      .col#{$infix}-#{$i} {
+        @extend %grid-column;
+      }
+    }
+    .col#{$infix},
+    .col#{$infix}-auto {
       @extend %grid-column;
+    }
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+      .col#{$infix} {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+      .col#{$infix}-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: none; // Reset earlier grid tiers
+      }
+
+      @for $i from 1 through $columns {
+        .col#{$infix}-#{$i} {
+          @include make-col($i, $columns);
+        }
+      }
+
+      .order#{$infix}-first { order: -1; }
+
+      .order#{$infix}-last { order: $columns + 1; }
+
+      @for $i from 0 through $columns {
+        .order#{$infix}-#{$i} { order: $i; }
+      }
+
     }
   }
 }

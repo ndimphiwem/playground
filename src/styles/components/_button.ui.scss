@@ -10,6 +10,7 @@ $button-sizes: (
 
  /** Button Block  **/
 .c-btn {
+  $this: &;
  @extend %button;
 
   @mixin make-outline(
@@ -17,16 +18,16 @@ $button-sizes: (
     $active-background: $color, 
     $active-border: $color
   ) {
-  color: $color;
-  background-color: transparent;
-  background-image: none;
-  border-color: $color;
+    color: $color;
+    background-color: transparent;
+    background-image: none;
+    border-color: $color;
 
-  &:hover {
-    color: $white-color;
-    background-color: $active-background;
-    border-color: $active-border;
-  }
+    @include hover {
+      color: $white-color;
+      background-color: $active-background;
+      border-color: $active-border;
+    }
  }
 
   /** Button Elements  **/
@@ -92,21 +93,18 @@ $button-sizes: (
     }
   }
 
-  // Have a look at this
   &__link {
-    text-decoration: none;
+    background: none; 
     border: 0;
-    background: none;
+    text-decoration: none;
 
-    &:hover {
-        background: none;
-        color: $body-color;
-        border: 0;
-        text-decoration: underline;
+    @include hover {
+      color: $body-color;
+      text-decoration: underline;
     }
 
-    &:focus {
-        color: $white-color;
+    @include focus {
+      color: $white-color;
     }
   }
 
@@ -133,56 +131,49 @@ $button-sizes: (
     text-align: center;
     color: $white-color;
     margin-left: 30px;
-    cursor: pointer;
     z-index: 2;
+    cursor: pointer;
 
     &:before, &:after {
-      z-index: -1;
       content: "";
       position: absolute;
       background-color: $primary-color;
-      border: 2px solid $primary-color;
+      border: $border-radi solid $primary-color;
       display: block;
-      transition: .2s ease-out;
+      transition: $b-animation__duration $b-animation__timming;
       transition-property: background-color, color;
+      z-index: -1;
     }
 
     &:before {
       border-width: 2px 0 2px 2px;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      -webkit-transform: skew(15deg);
-      -ms-transform: skew(15deg);
+      @include position(0px);
       transform: skew(15deg);
     }
 
     &:after {
       border-width: 2px 2px 2px 0;
-      top: 0;
-      bottom: 0;
-      right: -9px;
+      @include position(0px, -9px, 0px, auto);
       width: 20px;
     }
 
     &:hover {
       color: $primary-color;
-      &:after {
-        background-color: $white-color;
-      }
-    
-      &:before {
+      &:before, &:after {
         background-color: $white-color;
       }
     }
   }
 
   /** Button Modifiers  **/
-  &--full {
+  &--expanded {
     display: block;
-    clear: both;
     width: 100%;
+  }
+
+  &--full {
+    @extend #{$this}--expanded;
+    clear: both;
   }
 
   &--no-padding {
@@ -190,28 +181,20 @@ $button-sizes: (
   }
 
   &--opposite {
-    // margin: 1rem 0 0 0;
-    
+    $b-bw: 2px 0 2px 2px;
+    $a-bw: 2px 2px 2px 0;
+
     &:before {
-      border-width: 2px 0 2px 2px;
-      top: 0;
-      bottom: 0;
-      left: -9px;
+      border-width: $b-bw;
+      @include position(0px, auto, 0px, -9px);
       width: 20px;
-      -webkit-transform: none;
-      -ms-transform: none;
       transform: none;
     }
 
     &:after {
-      border-width: 2px 2px 2px 0;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      border-width: $a-bw;
+      @include position(0px);
       width: auto;
-      -webkit-transform: skew(-15deg);
-      -ms-transform: skew(-15deg);
       transform: skew(-15deg);
     }
   }
@@ -239,11 +222,6 @@ $button-sizes: (
 
   &--squared {
     border-radius: 0px;
-  }
-
-  &--expanded {
-    display: block;
-    width: 100%;
   }
 
   &--clear {

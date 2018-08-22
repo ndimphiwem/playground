@@ -1,4 +1,4 @@
-// @COMPONENT
+/** @COMPONENT **/
 
 /** Button Sizes **/
 $button-sizes: (
@@ -11,7 +11,7 @@ $button-sizes: (
  /** Button Block  **/
 .c-btn {
   $this: &;
- @extend %button;
+  @extend %button;
 
   @mixin make-outline(
     $color, 
@@ -32,11 +32,11 @@ $button-sizes: (
 
   /** Button Elements  **/
   &__default {
-    background-color: $body-color;
+    background-color: $default-color;
     @include hover {
-      border-color: $body-color;
+      border-color: $default-color;
       background-color: $white-color;
-      color: $body-color;
+      color: $default-color;
     }
   }
 
@@ -199,7 +199,6 @@ $button-sizes: (
     }
   }
 
-  // Make a sizes map for this
   &--sm {
     padding: map-get($button-sizes, sm);
     font-size: text-scale('sm');

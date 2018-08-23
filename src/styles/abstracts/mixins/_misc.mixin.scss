@@ -1,0 +1,14 @@
+@mixin links( $normal, $visited: $hover-color, $hover: $hover-color ) {
+  &:visited {
+    color: $visited;
+  }
+  &:hover, &:active, &:focus {
+    color: $hover;
+  }
+}
+
+@mixin shadow( $x, $y, $blur, $color: $shadow-color ) {
+  -webkit-box-shadow: $x $y $blur $color;
+  -moz-box-shadow: $x $y $blur $color;
+  box-shadow: $x $y $blur $color;
+}

@@ -41,11 +41,16 @@ $button-sizes: (
   }
 
   &__primary {
-    background-color: $primary-color;
+    background-color: $btn-primary;
+
+    &--#{$theme} {
+      background-color: $btn-primary;     
+    }
+
     @include hover {
-      border-color: $primary-color;
+      border-color: $btn-primary;
       background-color: $white-color;
-      color: $primary-color;
+      color: $btn-primary;
     }
   }
 
@@ -94,6 +99,7 @@ $button-sizes: (
   }
 
   &__link {
+    $sty: &;
     background: none; 
     border: 0;
     text-decoration: none;
@@ -105,6 +111,16 @@ $button-sizes: (
 
     @include focus {
       color: $white-color;
+    }
+
+    /** Inheriting From c-btn__link 
+    * Then Modifying the hover state
+    **/
+    &--#{$theme} {
+      @extend #{$this}__link;
+      @include hover {
+        color: $btn-primary; // This needs to come from theme vars
+      }     
     }
   }
 
@@ -138,7 +154,7 @@ $button-sizes: (
       content: "";
       position: absolute;
       background-color: $primary-color;
-      border: $border-radi solid $primary-color;
+      border: $border-radii solid $primary-color;
       display: block;
       transition: $b-animation__duration $b-animation__timming;
       transition-property: background-color, color;

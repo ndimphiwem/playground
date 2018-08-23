@@ -9,6 +9,9 @@ import { ModalsComponent } from './components/modals/modals.component';
 import { ImagesComponent } from './components/images/images.component';
 import { UtilitiesComponent } from './components/utilities/utilities.component';
 import { TabsComponent } from './components/tabs/tabs.component';
+import { LabelsComponent } from './components/labels/labels.component';
+import { ListsComponent } from './components/lists/lists.component';
+import { PanelsComponent } from './components/panels/panels.component';
 
 const routes: Routes = [
   {
@@ -46,6 +49,18 @@ const routes: Routes = [
   {
     path: 'images',
     component: ImagesComponent
+  },
+  {
+    path: 'labels',
+    component: LabelsComponent
+  },
+  {
+    path: 'lists',
+    component: ListsComponent
+  },
+  {
+    path: 'panels',
+    component: PanelsComponent
   }
 ];
 

@@ -13,6 +13,9 @@ import { ModalsComponent } from './components/modals/modals.component';
 import { ImagesComponent } from './components/images/images.component';
 import { UtilitiesComponent } from './components/utilities/utilities.component';
 import { TabsComponent } from './components/tabs/tabs.component';
+import { PanelsComponent } from './components/panels/panels.component';
+import { ListsComponent } from './components/lists/lists.component';
+import { LabelsComponent } from './components/labels/labels.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { TabsComponent } from './components/tabs/tabs.component';
     ModalsComponent,
     ImagesComponent,
     UtilitiesComponent,
-    TabsComponent
+    TabsComponent,
+    PanelsComponent,
+    ListsComponent,
+    LabelsComponent
   ],
   imports: [
     BrowserModule,

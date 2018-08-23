@@ -1,52 +1,48 @@
 /** Site Colors **/
 
 /** Brand Theme Colors **/
-$b-club-plus: #FFC421;
-$b-jackpots: #baa14f;
-$b-betting: #acc540;
-$b-insider: #81c341;
-$b-sports: #439539;
-$b-dealer: #66cae0;
-$b-virtuals: #04a09d;
-$b-casino: #0054a4;
-$b-esport: #642282;
-$b-betgames: #a01045;
-$b-vegas: #ed1c24;
-$b-vip: #939598;
-$b-dark-grey: #262626;
+$theming: (
+  club-plus: #FFC421,
+  jackpots: #baa14f,
+  betting: #acc540,
+  insider: #81c341,
+  sports: #439539,
+  dealer: #66cae0,
+  virtuals: #04a09d,
+  casino: #0054a4,
+  esport: #642282,
+  betgames: #a01045,
+  vegas: #ed1c24,
+  vip: #939598,
+);
 
-/** Colors **/
+/** Theme related Vars **/
+$primary-color: map-get($theming, $theme);
+$btn-primary: map-get($theming, $theme);
+
+/** General Colors **/
 $black-color: #000000;
 $black-color-trans: rgba(0, 0, 0, 0.6);
 $white-color: #FFFFFF;
+$b-dark-grey: #262626;
 
-$cyan-blue-color: rgb(2, 3, 3);
-$orange-color: #F78E1E;
-$magenta-color: #EF5BA1;
-$grey-color: #cfcfcf;
-$grey-color-trans: rgba(207, 207, 207, 0.6);
-$dark-grey-color: #222222;
-$light-grey-color: #dddddd;
-$v-light-grey-color: #f2f2f2;
+/** Action Colors **/
+$success-color: map-get($theming, 'betting');
+$danger-color: map-get($theming, 'vegas');
+$warning-color: #f39c12;
+$info-color: #3498db;
 
-/** Primary Colors **/
-$primary-color: $b-betting;
+/** Other Colors **/
+$secondary-color: #194484;
+$default-color: #ced9e1;
 $border-color: #cccccc;
-$btn-color: $b-betting;
-$btn-hover-color: #2a2a2a;
+
 $basic-color: #6fbea8;
 $bg-color: #ededed;
 $body-color: #333333;
 $shadow-color: #bbbbbb;
 $hover-color: #8c8a8a;
-$info-color: #3498db;
-$success-color: $b-betting;
-$warning-color: #f39c12;
-$danger-color: $b-vegas;
-$secondary-color: #194484;
-$default-color: #ced9e1;
-$gray-color: $grey-color;
-$light-gray-color: $light-grey-color;
+
 $footer-nav-color: #171717;
 $footer-nav-header-color: #307bb5;
 $footer-icon-background: rgba(185, 207, 222, 0.5);

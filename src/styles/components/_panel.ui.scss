@@ -1,0 +1,27 @@
+/** @COMPONENT **/
+
+.c-panel {
+	padding: 10px 15px;
+	margin: 5px 0;
+  border: 1px solid $primary-color;
+
+	&__round {
+		border-radius: $border-radii;
+	}
+
+	&__primary {
+		background-color: $info-color;
+	}
+
+	&__success {
+		background-color: $success-color;
+	}
+
+	&__warning {
+		background-color: $warning-color;
+	}
+
+	&__danger {
+		background-color: $danger-color;
+	}
+}

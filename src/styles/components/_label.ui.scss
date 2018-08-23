@@ -1,0 +1,35 @@
+.c-label {
+	display: inline;
+	line-height: $font__line-height;
+	font-size: text-scale('base');
+	color: $primary-color;
+	border: 1px solid $primary-color;
+	text-align: center;
+	white-space: nowrap;
+	padding: 3px 4px;
+	border-radius: $border-radii;
+
+  &__primary {
+    color: $info-color;
+		border: 1px solid $info-color;
+  }
+
+  &__success {
+    color: $success-color;
+		border: 1px solid $success-color;
+  }
+
+  &__warning {
+    color: $warning-color;
+		border: 1px solid $warning-color;
+  }
+
+  &__danger {
+    color: $danger-color;
+		border: 1px solid $danger-color;
+  }
+
+  &--no-b-color {
+    border: 1px solid transparent;
+  }
+}

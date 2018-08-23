@@ -87,6 +87,13 @@ $button-sizes: (
       background-color: $white-color;
       color: $warning-color;
     }
+    &--outline {
+      @include make-outline(
+       $warning-color, 
+       $active-background: $warning-color, 
+       $active-border: $warning-color
+      );
+    }
   }
 
   &__danger {

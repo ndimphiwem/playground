@@ -180,6 +180,10 @@ $button-sizes: (
     padding: 0;
   }
 
+  &--no-radius{
+    border-radius: 0;
+  }
+
   &--opposite {
     $b-bw: 2px 0 2px 2px;
     $a-bw: 2px 2px 2px 0;

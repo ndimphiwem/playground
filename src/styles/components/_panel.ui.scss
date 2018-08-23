@@ -1,10 +1,15 @@
 /** @COMPONENT **/
 
+/** Panel Block **/
 .c-panel {
-	padding: 10px 15px;
-	margin: 5px 0;
-  border: 1px solid $primary-color;
+	padding: $panel-padding;
+	margin: $panel-margins;
+	border: 1px solid $primary-color;
+	@if ($panel-width != null) {
+		width: $panel-width;
+	}
 
+	/** Elements **/
 	&__round {
 		border-radius: $border-radii;
 	}
@@ -23,5 +28,14 @@
 
 	&__danger {
 		background-color: $danger-color;
+	}
+
+	/** Modifiers **/
+	&--left {
+		left: 0;
+	}
+
+	&--right {
+		right: 0;
 	}
 }

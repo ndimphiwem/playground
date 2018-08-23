@@ -1,6 +1,13 @@
-/** TODO:  Add Color Option on lists **/
+/** Lists Utility **/
 
+ /** Lists Block  **/
 .u-list {
+  /** TODO:  Add Color Option on lists **/
+	li {
+		display: inline;
+  }
+
+  /** Lists Elemenets  **/
   &__circle {
     list-style-type: circle;
   }
@@ -17,11 +24,11 @@
     list-style-type: lower-alpha;
   }
 
-	li {
-		display: inline;
-  }
 
-  /** FIXME: better Implementation **/
+  /** Lists modifiers **/
+  /** FIXME: better Implementation of &--has-image 
+  ** TODO: possibly loop over icons and dynamical create [FA ?]
+  **/
   &--has-image {
     // list-style-image: url('./images/test.png');
   }
@@ -40,7 +47,7 @@
     display: inline;
     padding: 0;
   }
-  
+
   &--table {
     display: table-cell;
     padding: 0;

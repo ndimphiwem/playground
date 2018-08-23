@@ -139,7 +139,7 @@ $button-sizes: (
     }
   }
 
-  // Look at how to better implement this
+  /** FIXME: Look at how to better implement this **/
   &__skewed {
     position: relative;
     background-color: transparent;
@@ -196,7 +196,7 @@ $button-sizes: (
     padding: 0;
   }
 
-  &--no-radius{
+  &--no-radius {
     border-radius: 0;
   }
 

@@ -1,3 +1,6 @@
+/** @COMPONENT **/
+
+ /** Label Block  **/
 .c-label {
 	display: inline;
 	line-height: $font__line-height;
@@ -7,8 +10,10 @@
 	text-align: center;
 	white-space: nowrap;
 	padding: 3px 4px;
-	border-radius: $border-radii;
+  border-radius: $border-radii;
+  
 
+  /** Label Elements **/
   &__primary {
     color: $info-color;
 		border: 1px solid $info-color;
@@ -29,6 +34,7 @@
 		border: 1px solid $danger-color;
   }
 
+  /** Label Modifiers **/
   &--no-b-color {
     border: 1px solid transparent;
   }

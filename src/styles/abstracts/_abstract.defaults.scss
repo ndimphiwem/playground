@@ -54,3 +54,7 @@ $card-header-color: #111 !default;
 $card-content-bg-color: transparent;
 $card-footer-bg-color: transparent;
 $card-footer-border-top: 1px solid green !default;
+
+/** Images **/
+$dimensions: (16: 16, 24: 24, 32: 32, 48: 48, 64: 64, 96: 96, 128: 128);
+$radii-rounded: 290486px !default;

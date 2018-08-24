@@ -1,0 +1,11 @@
+@function halve ($size) {
+  @return $size / 2;
+}
+
+@function double ($size) {
+  @return $size * 2;
+}
+
+@function quarter ($size) {
+  @return halve($size) / 2;
+}

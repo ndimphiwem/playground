@@ -21,13 +21,13 @@ $alignments:(
 
 
 @each $justify, $value in $justify-values {
-    .u-justify--#{$justify} {
+    .u-grid-justify--#{$justify} {
       justify-content: #{$value};
     }
 }
 
 @each $alignment, $value in $alignments {
-    .u-align--#{$alignment} {
+    .u-grid-align--#{$alignment} {
       align-items: #{$value};
     }
 }

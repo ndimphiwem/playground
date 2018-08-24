@@ -1,0 +1,9 @@
+.c-tabs {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+
+    &__vertical {
+        flex-direction: column;
+    }
+}

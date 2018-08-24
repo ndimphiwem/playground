@@ -131,6 +131,24 @@ $button-sizes: (
     }
   }
 
+  &__tab {
+    width: 100%;
+    background: none; 
+    color: $white-color;
+    text-decoration: none;
+    background-color: transparent;
+    border: 0;
+
+    &--active {
+      background: rgba($btn-primary, 0.5); 
+      border-bottom: 5px solid $btn-primary;
+    }
+
+    @include hover {
+      border-bottom: 5px solid $btn-primary;
+    }
+  }
+
   &__input {
     top: -30px;
     float: right;

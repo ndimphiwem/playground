@@ -87,6 +87,13 @@ $button-sizes: (
       background-color: $white-color;
       color: $warning-color;
     }
+    &--outline {
+      @include make-outline(
+       $warning-color, 
+       $active-background: $warning-color, 
+       $active-border: $warning-color
+      );
+    }
   }
 
   &__danger {
@@ -157,7 +164,7 @@ $button-sizes: (
     }
   }
 
-  // Look at how to better implement this
+  /** FIXME: Look at how to better implement this **/
   &__skewed {
     position: relative;
     background-color: transparent;
@@ -214,7 +221,7 @@ $button-sizes: (
     padding: 0;
   }
 
-  &--no-radius{
+  &--no-radius {
     border-radius: 0;
   }
 

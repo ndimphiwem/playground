@@ -1,0 +1,27 @@
+/** Images Utility **/
+
+.u-image {
+  display: block;
+  position: relative;
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+
+    &.is--rounded {
+      border-radius: $radii-rounded;
+    }
+  }
+
+  &__is {
+    @each $dim, $val in $dimensions {
+      &--#{$val}by#{$val} {
+        $calc: $val * 1;
+        width: #{$calc}px !important;
+        height: #{$calc}px !important;
+      }
+    }
+  }
+}
+

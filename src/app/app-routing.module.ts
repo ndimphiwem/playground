@@ -12,6 +12,7 @@ import { TabsComponent } from './components/tabs/tabs.component';
 import { LabelsComponent } from './components/labels/labels.component';
 import { ListsComponent } from './components/lists/lists.component';
 import { PanelsComponent } from './components/panels/panels.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 const routes: Routes = [
   {
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: 'panels',
     component: PanelsComponent
+  },
+  {
+    path: 'cards',
+    component: CardsComponent
   }
 ];
 

@@ -1,0 +1,335 @@
+/** TODO: document code 
+* Usage: @include marg-or-pad("padding");
+**/
+@mixin marg-or-pad($m-or-p) {
+  &--none {
+    #{$m-or-p}: 0px;
+  }
+
+  &--h-none {
+    #{$m-or-p}-left: 0px;
+    #{$m-or-p}-right: 0px;
+  }
+
+  &--v-none {
+    #{$m-or-p}-top: 0px;
+    #{$m-or-p}-bottom: 0px;
+  }
+
+  @include --breakpoint(tablet) {
+    &--sm {
+      #{$m-or-p}: halve($base-spacing-unit);
+    }
+  
+    &--md {
+      #{$m-or-p}: $base-spacing-unit;
+    }
+  
+    &--lg {
+      #{$m-or-p}: double($base-spacing-unit);
+    }
+
+    @if ($m-or-p == "padding") {
+      &--xlg {
+        padding: round($base-spacing-unit * $xlarge-multi);
+      }
+    }
+  }
+
+  @include --breakpoint(mobile) {
+    &--sm {
+      #{$m-or-p}: quarter($base-spacing-unit);
+    }
+
+    &--md {
+      #{$m-or-p}: halve($base-spacing-unit);
+    }
+
+    &--lg {
+      #{$m-or-p}: $base-spacing-unit;
+    }
+
+    @if ($m-or-p == "padding") {
+      &--xlg {
+        padding: double($base-spacing-unit);
+      }
+    }
+  }
+
+  /** Begin #{$m-or-p} horizontal **/
+  @include --breakpoint(tablet) {
+    &--h-sm {
+      #{$m-or-p}-left: halve($base-spacing-unit);
+      #{$m-or-p}-right: halve($base-spacing-unit);
+    }
+
+    &--h-md {
+      #{$m-or-p}-left: $base-spacing-unit;
+      #{$m-or-p}-right: $base-spacing-unit;
+    }
+
+    &--h-lg {
+      #{$m-or-p}-left: double($base-spacing-unit);
+      #{$m-or-p}-right: double($base-spacing-unit);
+    }
+
+    @if ($m-or-p == "padding") {
+      &--h-xlg {
+        padding-left: round($base-spacing-unit * $xlarge-multi);;
+        padding-right: round($base-spacing-unit * $xlarge-multi);;
+      }
+    }
+  }
+
+  @include --breakpoint(mobile) {
+    &--h-sm {
+      #{$m-or-p}-left: quarter($base-spacing-unit);
+      #{$m-or-p}-right: quarter($base-spacing-unit);
+    }
+
+    &--h-md {
+      #{$m-or-p}-left: halve($base-spacing-unit);
+      #{$m-or-p}-right: halve($base-spacing-unit);
+    }
+
+    &--h-lg {
+      #{$m-or-p}-left: $base-spacing-unit;
+      #{$m-or-p}-right: $base-spacing-unit;
+    }
+
+    @if ($m-or-p == "padding") {
+      &--h-xlg {
+        padding-left: double($base-spacing-unit);
+        padding-right: double($base-spacing-unit);
+      }
+    }
+  }
+  /** End #{$m-or-p} horizontal **/
+
+
+  /** Begin #{$m-or-p} vertical **/
+  @include --breakpoint(tablet) {
+    &--v-sm {
+      #{$m-or-p}-top: halve($base-spacing-unit);
+      #{$m-or-p}-bottom: halve($base-spacing-unit);
+    }
+  
+    &--v-md {
+      #{$m-or-p}-top: $base-spacing-unit;
+      #{$m-or-p}-bottom: $base-spacing-unit;
+    }
+  
+    &--v-lg {
+      #{$m-or-p}-top: double($base-spacing-unit);
+      #{$m-or-p}-bottom: double($base-spacing-unit);
+    }
+
+    @if ($m-or-p == "padding") {
+      &--v-xlg {
+        padding-top: round($base-spacing-unit * $xlarge-multi);
+        padding-bottom: round($base-spacing-unit * $xlarge-multi);
+      } 
+    }
+  }
+
+  @include --breakpoint(mobile) {
+    &--v-sm {
+      #{$m-or-p}-top: quarter($base-spacing-unit);
+      #{$m-or-p}-bottom: quarter($base-spacing-unit);
+    }
+
+    &--v-md {
+      #{$m-or-p}-top: halve($base-spacing-unit);
+      #{$m-or-p}-bottom: halve($base-spacing-unit);
+    }
+
+    &--v-lg {
+      #{$m-or-p}-top: $base-spacing-unit;
+      #{$m-or-p}-bottom: $base-spacing-unit;
+    }
+
+    @if ($m-or-p == "padding") {
+      &--v-xlg {
+        padding-top: double($base-spacing-unit);
+        padding-bottom: double($base-spacing-unit);
+      }
+    }
+  }
+  /** Begin #{$m-or-p} vertical **/
+
+ @include --breakpoint(tablet) {
+    &--lft-none {
+      #{$m-or-p}-left: 0px;
+    }
+
+    &--lft-sm {
+      #{$m-or-p}-left: halve($base-spacing-unit);
+    }
+
+    &--lft-md {
+      #{$m-or-p}-left: $base-spacing-unit;
+    }
+
+    &--lft-lg {
+      #{$m-or-p}-left: double($base-spacing-unit);
+    }
+
+    @if ($m-or-p == "padding") {
+      &--lft-xlg {
+        padding-left: round($base-spacing-unit * $xlarge-multi);
+      }
+    }
+ }
+
+  @include --breakpoint(mobile) {
+    &--lft-sm {
+      #{$m-or-p}-left: quarter($base-spacing-unit);
+    }
+
+    &--lft-md {
+      #{$m-or-p}-left: halve($base-spacing-unit);
+    }
+
+    &--lft-lg {
+      #{$m-or-p}-left: $base-spacing-unit;
+    }
+
+    @if ($m-or-p == "padding") {
+      &--lft-xlg {
+        padding-left: double($base-spacing-unit);
+      }
+    }
+  }
+
+  @include --breakpoint(tablet) {
+    &--rgt-none {
+      #{$m-or-p}-right: 0px;
+    }
+  
+    &--rgt-sm {
+      #{$m-or-p}-right: halve($base-spacing-unit);
+    }
+  
+    &--rgt-md {
+      #{$m-or-p}-right: $base-spacing-unit;
+    }
+  
+    &--rgt-lg {
+      #{$m-or-p}-right: double($base-spacing-unit);
+    }
+
+    @if ($m-or-p == "padding") {
+      &--rgt-lg {
+        padding-right: round($base-spacing-unit * $xlarge-multi);
+      }   
+    }
+  }
+
+  @include --breakpoint(mobile) {
+    &--rgt-sm {
+      #{$m-or-p}-right: quarter($base-spacing-unit);
+    }
+
+    &--rgt-md {
+      #{$m-or-p}-right: halve($base-spacing-unit);
+    }
+
+    &--rgt-lg {
+      #{$m-or-p}-right: $base-spacing-unit;
+    }
+  
+    @if ($m-or-p == "padding") {
+      &--rgt-lg {
+        padding-right: double($base-spacing-unit);
+      }   
+    }
+  }
+
+  @include --breakpoint(tablet) {  
+    &--tp-none {
+      #{$m-or-p}-top: 0px;
+    }
+
+    &--tp-sm {
+      #{$m-or-p}-top: halve($base-spacing-unit);
+    }
+
+    &--tp-md {
+      #{$m-or-p}-top: $base-spacing-unit;
+    }
+
+    &--tp-lg {
+      #{$m-or-p}-top: double($base-spacing-unit);
+    }
+
+    @if ($m-or-p == "padding") {  
+      &--tp-xlg {
+        padding-top: round($base-spacing-unit * $xlarge-multi);
+      }
+    }
+  }
+
+  @include --breakpoint(mobile) {
+    &--tp-sm {
+      #{$m-or-p}-top: quarter($base-spacing-unit);
+    }
+
+    &--tp-md {
+      #{$m-or-p}-top: halve($base-spacing-unit);
+    }
+
+    &--tp-lg {
+      #{$m-or-p}-top: $base-spacing-unit;
+    }
+    
+    @if ($m-or-p == "padding") {  
+      &--tp-xlg {
+        padding-top: double($base-spacing-unit);
+      }
+    }
+  }
+
+  @include --breakpoint(tablet) {    
+    &--btm-none {
+      #{$m-or-p}-bottom: 0px;
+    }
+
+    &--btm-sm {
+      #{$m-or-p}-bottom: halve($base-spacing-unit);
+    }
+
+    &--btm-md {
+      #{$m-or-p}-bottom: $base-spacing-unit;
+    }
+
+    &--btm-lg {
+      #{$m-or-p}-bottom: double($base-spacing-unit);
+    }
+
+    @if ($m-or-p == "padding") {
+      &--btm-xlg {
+        padding-bottom: round($base-spacing-unit * $xlarge-multi);
+      }
+    }
+  }
+
+  @include --breakpoint(mobile) {
+    &--btm-sm {
+      #{$m-or-p}-bottom: quarter($base-spacing-unit);
+    }
+
+    &--btm-md {
+      #{$m-or-p}-bottom: halve($base-spacing-unit);
+    }
+
+    &--btm-lg {
+      #{$m-or-p}-bottom: $base-spacing-unit;
+    }
+
+    @if ($m-or-p == "padding") {
+      &--btm-xlg {
+        padding-bottom: double($base-spacing-unit);
+      }
+    }
+  }
+}

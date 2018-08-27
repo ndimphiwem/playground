@@ -4,7 +4,7 @@
 $theme: 'sports';
 
 /** Debug Mode **/
-$debug: false;
+$debug: true;
 
 /** URLs **/
 $dev: "https://cms1.gmgamingsystems.dev.com";
@@ -36,11 +36,12 @@ $gutter-width: 30px !default;
 $grid-columns: 12 !default;
 
 /** Animation **/
-$b-animation__duration: 0.3s !default;
-$b-animation__timming: ease-out !default;
+$animation__duration: .3s;
+$animation__timming: ease-out;
 
 /** Border **/
 $border-radii: 4px;
+$btn-radii: 3px;
 
 /** Panel Padding **/
 $panel-width: null;

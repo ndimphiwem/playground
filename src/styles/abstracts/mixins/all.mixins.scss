@@ -1,6 +1,7 @@
 // @MIXINS
 // Used in conjunction with global variables to enable certain theme features.
 
+@import 'animation.mixin';
 @import 'breakpoints.mixin';
 @import 'font.mixin';
 @import 'media.mixin';
@@ -8,6 +9,6 @@
 @import 'button.mixin';
 @import 'positions.mixin';
 @import 'form.mixin';
-@import 'animation.mixin';
 @import 'sizing.mixin';
+@import 'align.mixin';
 @import 'misc.mixin';

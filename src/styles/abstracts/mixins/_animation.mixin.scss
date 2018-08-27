@@ -1,6 +1,6 @@
-@mixin animate( $property: all, $duration: $b-animation__duration, $easing: $b-animation__timming ) {
-  -webkit-transition: $property $duration $easing;
-  -moz-transition: $property $duration $easing;
-  -o-transition: $property $duration $easing;
-  transition: $property $duration $easing;
+@mixin animate($property...) {
+  -webkit-transition: $property $animation__duration $animation__timming;
+  -moz-transition: $property $animation__duration $animation__timming;
+  -o-transition: $property $animation__duration $animation__timming;
+  transition: $property $animation__duration $animation__timming;
 }

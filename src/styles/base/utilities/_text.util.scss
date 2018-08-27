@@ -1,0 +1,65 @@
+$alignments:(
+  'centered': 'center', 
+  'justified': 'justify', 
+  'left': 'left',
+  'right': 'right'
+);
+
+.u-content {
+  &--center {
+    @extend %center-content; 
+  }
+
+  &--left {
+    @extend %center-content;
+    margin-left: 0;
+  }
+
+  &--right {
+    @extend %center-content;
+    margin-right: 0;
+  }
+}
+
+@each $alignment, $text-align in $alignments {
+  .u-has-text--#{$alignment} {
+    text-align: #{$text-align};
+  }
+
+  @include --breakpoint(mobile) {
+    .u-has-text--#{$alignment}__mobile {
+      text-align: #{$text-align};
+    }
+  }
+
+  @include --breakpoint(tablet) {
+    .u-has-text--#{$alignment}__tablet {
+      text-align: #{$text-align};
+    }
+  }
+
+  @include --breakpoint(desktop) {
+    .u-has-text--#{$alignment}__desktop {
+      text-align: #{$text-align};
+    }
+  }
+}
+
+.u-is {
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--capitalised {
+    text-transform: capitalize;
+  }
+
+  &--lowercase {
+    text-transform: lowercase;
+  }
+
+  &--italic {
+    text-transform: italic;
+  }
+
+}

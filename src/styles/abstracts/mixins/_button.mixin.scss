@@ -5,13 +5,14 @@
   text-align: center;
   line-height: 1;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: $btn-radii;
   position: relative;
   vertical-align: middle;
   text-decoration: none;
-  transition: .2s ease-out;
+  transition: $animation__duration $animation__timming;
   transition-property: background-color, color;
-  border: 2px solid transparent;
+  // @include animate(background-color, color);
+  border: ($border-radii - 2) solid transparent;
   font-weight: $font__weight;
 
   &:focus {

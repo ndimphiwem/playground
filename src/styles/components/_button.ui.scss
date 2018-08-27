@@ -189,7 +189,7 @@ $button-sizes: (
       background-color: $primary-color;
       border: $border-radii solid $primary-color;
       display: block;
-      transition: $b-animation__duration $b-animation__timming;
+      transition: $animation__duration $animation__timming;
       transition-property: background-color, color;
       z-index: -1;
     }
@@ -211,6 +211,20 @@ $button-sizes: (
       &:before, &:after {
         background-color: $white-color;
       }
+    }
+
+    &__box {
+      /** TODO: Move this var to defaults **/
+      $btn-skewed-box-h: 60px;
+      border-radius: $border-radii - 2;
+      background-color: $b-dark-grey;
+      overflow: hidden;
+      height: $btn-skewed-box-h;
+      cursor: pointer;
+    }
+
+    &__text {
+      line-height: $font__line-height * 2;
     }
   }
 

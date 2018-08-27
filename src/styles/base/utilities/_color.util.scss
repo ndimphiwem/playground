@@ -1,0 +1,17 @@
+@each $name, $val in $theming {
+  .bg-#{$name} {
+    background-color: $val;
+  }
+
+  .text-#{$name} {
+    color: $val;
+  }
+
+  .text-#{$name}-lighten {
+    color: lighten($val, 15%);
+  }
+
+  .text-#{$name}-darken {
+    color: darken($val, 15%);
+  }
+}

@@ -1,0 +1,14 @@
+.c-input {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    margin: 0 0 20px 0;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+
+    &:focus {
+        outline: none;
+        border: 1px solid transparent;
+        box-shadow: 0 0 0 0.125em rgba($success-color,.5)
+    }
+}

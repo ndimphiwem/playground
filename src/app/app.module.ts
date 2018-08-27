@@ -14,8 +14,6 @@ import { ImagesComponent } from './components/images/images.component';
 import { UtilitiesComponent } from './components/utilities/utilities.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { PanelsComponent } from './components/panels/panels.component';
-import { ListsComponent } from './components/lists/lists.component';
-import { LabelsComponent } from './components/labels/labels.component';
 import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
@@ -32,8 +30,6 @@ import { CardsComponent } from './components/cards/cards.component';
     UtilitiesComponent,
     TabsComponent,
     PanelsComponent,
-    ListsComponent,
-    LabelsComponent,
     CardsComponent
   ],
   imports: [

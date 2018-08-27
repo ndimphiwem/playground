@@ -1,14 +1,35 @@
 .c-input {
-    display: block;
-    width: 100%;
-    padding: 5px 10px;
-    margin: 0 0 20px 0;
-    border: 1px solid $border-color;
-    border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  margin: 0 0 20px 0;
+  border: 1px solid $border-color;
 
+  @mixin focus {
     &:focus {
-        outline: none;
-        border: 1px solid transparent;
-        box-shadow: 0 0 0 0.125em rgba($success-color,.5)
+      outline: none;
+      border-color: transparent;
+      @content;
     }
+  }
+
+  &__has {
+    &--success {
+      @include focus {
+        @include shadow(0, 0, 0, 0.125em, rgba($success-color, 0.9));
+      }
+    }
+
+    &--error {
+      @include focus {
+        @include shadow(0, 0, 0, 0.125em, rgba($danger-color, 0.9));
+      }
+    }
+
+    &--warning {
+      @include focus {
+        @include shadow(0, 0, 0, 0.125em, rgba($warning-color, 0.9));
+      }
+    }
+  }
 }

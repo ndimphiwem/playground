@@ -12,6 +12,7 @@ h3,
 h4,
 h5,
 h6 {
+	padding-bottom: 15px;
 	font-weight: normal;
 	font-style: normal;
 	line-height: $font__line-height;
@@ -66,4 +67,7 @@ h6 {
 blockquote {
 	padding: 0 0 0 28px;
 	border-left: 6px solid $primary-color;
+}
+p {
+	padding-bottom: 15px;
 }

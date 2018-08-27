@@ -131,6 +131,18 @@ $button-sizes: (
     }
   }
 
+  &__feed {
+    display: flex;
+    @extend .u-grid-justify--between;
+    width: 100%;
+    padding: 10px 10px;
+    background-color: $faded-green;
+
+    &--item {
+      
+    }
+  }
+
   &__tab {
     width: 100%;
     background: none; 

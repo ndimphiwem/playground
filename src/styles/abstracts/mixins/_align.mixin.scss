@@ -1,0 +1,31 @@
+// @MIXIN
+
+%center-content {
+  width: 100%;
+  max-width: $tablet;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin text-align {
+  &--start {
+    text-align: left;
+
+    html.rtl & {
+      text-align: right;
+    }
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--end {
+    text-align: right;
+
+    html.rtl & {
+      text-align: left;
+    }
+  }
+}
+

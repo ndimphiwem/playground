@@ -204,6 +204,20 @@ $button-sizes: (
         background-color: $white-color;
       }
     }
+
+    &__box {
+      /** TODO: Move this var to defaults **/
+      $btn-skewed-box-h: 60px;
+      border-radius: $border-radii - 2;
+      background-color: $b-dark-grey;
+      overflow: hidden;
+      height: $btn-skewed-box-h;
+      cursor: pointer;
+    }
+
+    &__text {
+      line-height: $font__line-height * 2;
+    }
   }
 
   /** Button Modifiers  **/

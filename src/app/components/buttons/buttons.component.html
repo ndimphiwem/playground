@@ -6,52 +6,69 @@
   </div>
   <p>Default button classes</p>
   <div class="row">
-    <div class="col-6">
+    <div class="col-12">
       <a href="#" class="c-btn c-btn__default">Default</a>
       <a href="#" class="c-btn c-btn__primary">Primary</a>
       <a href="#" class="c-btn c-btn__success">Success</a>
       <a href="#" class="c-btn c-btn__warning">Warning</a>
       <a href="#" class="c-btn c-btn__danger">Danger</a>
+
+      <figure class="highlight">
+        <pre>
+          <code class="language-html" data-lang="html">
+            &lt;div class="col-6"&gt;
+              &lt;a class="c-btn c-btn__default"&gt;Default&lt;/a&gt;
+              &lt;a class="c-btn c-btn__primary"&gt;Primary&lt;/a&gt;
+              &lt;a class="c-btn c-btn__success"&gt;Success&lt;/a&gt;
+              &lt;a class="c-btn c-btn__warning"&gt;Warning&lt;/a&gt;
+              &lt;a class="c-btn c-btn__danger"&gt;Danger&lt;/a&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+      </figure>
     </div>
-    <div class="col-6">
+    <div class="col-12">
       <a href="#" class="c-btn c-btn--full c-btn__default">Default</a>
       <a href="#" class="c-btn c-btn__primary c-btn--full">Primary</a>
       <a href="#" class="c-btn c-btn__success c-btn--full">Success</a>
       <a href="#" class="c-btn c-btn__warning c-btn--full">Warning</a>
       <a href="#" class="c-btn c-btn__danger c-btn--full">Danger</a>
-    </div>
-  </div>
 
-  <p>Button skewed</p>
-  <div class="row">
-    <div class="col-12">
-      
-      <button type="button" class="c-btn c-btn__skewed">Left default</button>
-      <button type="button" class="c-btn c-btn__skewed c-btn--lg">Left large</button>
-      <button type="button" class="c-btn c-btn__skewed c-btn--lg c-btn--opposite">Right large</button>
-      <button type="button" class="c-btn c-btn__skewed c-btn--opposite">Right default</button>
+      <figure class="highlight">
+        <pre>
+          <code class="language-html" data-lang="html">
+            &lt;div class="col-6"&gt;
+              &lt;a href="#" class="c-btn c-btn--full c-btn__default"&gt;Default&lt;/a&gt;
+              &lt;a href="#" class="c-btn c-btn__primary c-btn--full"&gt;Primary&lt;/a&gt;
+              &lt;a href="#" class="c-btn c-btn__success c-btn--full"&gt;Success&lt;/a&gt;
+              &lt;a href="#" class="c-btn c-btn__warning c-btn--full"&gt;Warning&lt;/a&gt;
+              &lt;a href="#" class="c-btn c-btn__danger c-btn--full"&gt;Danger&lt;/a&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+      </figure>
     </div>
   </div>
 
   <p>Button sizing</p>
   <div class="row">
 
-      <div class="col-6">
-        <a href="#" class="c-btn c-btn__success c-btn--sm">Small</a>
-        <a href="#" class="c-btn c-btn__warning c-btn--md">Default</a>
-        <a href="#" class="c-btn c-btn__danger c-btn--lg">Large</a>
-      </div>
-      <br>
-      <div class="col-6">
-        <a href="#" class="c-btn c-btn__success c-btn--full c-btn--lg">Large</a>
-        <a href="#" class="c-btn c-btn__warning c-btn--full c-btn--md">Mid</a>
-        <a href="#" class="c-btn c-btn__danger c-btn--full c-btn--sm">Small</a>
-      </div>
-
+    <div class="col-6">
+      <a href="#" class="c-btn c-btn__success c-btn--sm">Small</a>
+      <a href="#" class="c-btn c-btn__warning c-btn--md">Default</a>
+      <a href="#" class="c-btn c-btn__danger c-btn--lg">Large</a>
+    </div>
+    <br>
+    <div class="col-6">
+      <a href="#" class="c-btn c-btn__success c-btn--full c-btn--lg">Large</a>
+      <a href="#" class="c-btn c-btn__warning c-btn--full c-btn--md">Mid</a>
+      <a href="#" class="c-btn c-btn__danger c-btn--full c-btn--sm">Small</a>
     </div>
 
-    <p>Button expanded</p>
-    <div class="row">
+  </div>
+
+  <p>Button expanded</p>
+  <div class="row">
     <div class="col-12">
       <a href="#" class="c-btn c-btn__default c-btn--expanded">Expanded</a>
       <a href="#" class="c-btn c-btn__success c-btn--expanded">Expanded</a>
@@ -59,22 +76,22 @@
 
   </div>
   <div class="row">
-    <div class="col-8">
+    <div class="col-12 col-sm-8">
       <p>Button Feed</p>
       <div class="row">
-        <div class="col-4">
+        <div class="col-12 col-sm-4">
           <button type="button" class="c-btn btn__success c-btn__feed">
             <div class="c-btn__feed--item">Team A Wins</div>
             <div class="c-btn__feed--item">Odds</div>
           </button>
         </div>
-        <div class="col-2">
+        <div class="col-12 col-sm-2">
           <button type="button" class="c-btn btn__success c-btn__feed">
             <div class="c-btn__feed--item">Teams Draw</div>
             <div class="c-btn__feed--item">Odds</div>
           </button>
         </div>
-        <div class="col-4">
+        <div class="col-12 col-sm-4">
           <button type="button" class="c-btn btn__success c-btn__feed">
             <div class="c-btn__feed--item">Team B Wins</div>
             <div class="c-btn__feed--item">Odds</div>
@@ -82,8 +99,8 @@
         </div>
         <div class="col">
           <button type="button" class="c-btn btn__success c-btn__feed">
-            <div class="c-btn__feed--item">Game 1</div>
-            <div class="c-btn__feed--item">Odds</div>
+            <div class="c-btn__feed-item">Game 1</div>
+            <div class="c-btn__feed-item">Odds</div>
           </button>
         </div>
       </div>

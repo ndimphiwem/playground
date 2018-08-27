@@ -51,3 +51,11 @@ $footer-icon-background: rgba(185, 207, 222, 0.5);
 $footer-t-background-color: #191919;
 $aams-block-color: #307ab5;
 $copyright-grey: #666666;
+
+/** TODO: Remove if unused **/
+:root {
+  // Custom variable values only support SassScript inside `#{}`.
+  @each $color, $value in $theming {
+    --#{$color}: #{$value};
+  }
+}

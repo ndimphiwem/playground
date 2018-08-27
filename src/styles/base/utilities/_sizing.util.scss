@@ -1,0 +1,7 @@
+.u-padding {
+  @include marg-or-pad('padding');
+}
+
+.u-margin {
+  @include marg-or-pad('margin');
+}

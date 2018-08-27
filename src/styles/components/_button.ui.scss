@@ -193,7 +193,7 @@ $button-sizes: (
       background-color: $primary-color;
       border: $border-radii solid $primary-color;
       display: block;
-      transition: $b-animation__duration $b-animation__timming;
+      transition: $animation__duration $animation__timming;
       transition-property: background-color, color;
       z-index: -1;
     }

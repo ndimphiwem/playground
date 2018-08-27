@@ -1,6 +1,4 @@
 // @MIXIN
-// 
-
 // Usage: @include --breakpoint(mobile)
 // Returns: @media screen and (max-width: 44.9375em) {}
 @mixin --breakpoint($device) {

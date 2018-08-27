@@ -1,6 +1,0 @@
-:root {
-  // Custom variable values only support SassScript inside `#{}`.
-  @each $color, $value in $theming {
-    --#{$color}: #{$value};
-  }
-}

@@ -5,7 +5,7 @@
 .c-card {
   $this: &;
   background-color: $card-bg-color;
-  @include shadow(0, 2px, 3px, $shadow-color, 1);
+  @include shadow(0, 2px, 3px, 0, $shadow-color, 1);
   color: $b-dark-grey;
   max-width: 100%;
   position: relative;
@@ -14,7 +14,7 @@
   &__header {
     background-color: $card-header-bg-color;
     align-items: stretch;
-    @include shadow(0, 1px, 2px, $shadow-color);
+    @include shadow(0, 1px, 2px, 0, $shadow-color);
     display: flex;
 
     &--title {

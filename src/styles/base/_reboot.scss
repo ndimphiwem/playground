@@ -87,8 +87,24 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   font-weight: normal;
 }
 
-ol, ul {
-  list-style: none;
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="color"],
+select,
+textarea {
+  display: block;
+  resize: none;
+  &:focus {
+    outline: 0;
+  }
 }
 
 progress {

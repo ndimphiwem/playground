@@ -8,22 +8,10 @@
   }
 
   /** Lists Elemenets  **/
-  &__circle {
-    list-style-type: circle;
+  &__no-type{
+    list-style-type: none;
   }
   
-  &__square {
-    list-style-type: square;
-  }
-  
-  &__roman {
-    list-style-type: upper-roman;
-  }
-  
-  &__alpha {
-    list-style-type: lower-alpha;
-  }
-
 
   /** Lists modifiers **/
   /** FIXME: better Implementation of &--has-image 

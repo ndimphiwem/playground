@@ -3,15 +3,15 @@
     background-color: $val;
   }
 
-  .text-#{$name} {
+  .text__#{$name} {
     color: $val;
-  }
 
-  .text-#{$name}-lighten {
-    color: lighten($val, 15%);
-  }
+    &--lighten {
+      color: lighten($val, 15%);
+    }
 
-  .text-#{$name}-darken {
-    color: darken($val, 15%);
+    &--darken {
+      color: darken($val, 15%);
+    }
   }
 }

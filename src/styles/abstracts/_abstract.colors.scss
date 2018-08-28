@@ -2,19 +2,24 @@
 
 /** Brand Theme Colors **/
 $theming: (
-  club-plus: #FFC421,
-  jackpots: #baa14f,
+  primary:#439539,
+  secondary: #6c757d,
+  vegas: #ed1c24,
+  poker: #f78e1e,
+  bingo: #ef5ba1,
+  plus: #FFC421,
+  vip: #939598,
+  esport: #642282,
+  virtuals: #0054a4,
   betting: #acc540,
   insider: #81c341,
-  sports: #439539,
-  dealer: #66cae0,
-  virtuals: #04a09d,
-  casino: #0054a4,
-  esport: #642282,
+  dealer: #66cae0, 
   betgames: #a01045,
-  vegas: #ed1c24,
-  vip: #939598,
-);
+  success: #acc540,
+  danger: #ed1c24,
+  warning: #f39c12,
+  info:#3498db
+) !default;
 
 /** Theme related Vars **/
 $primary-color: map-get($theming, $theme);
@@ -22,17 +27,17 @@ $btn-primary: map-get($theming, $theme);
 
 /** General Colors **/
 $black-color: #000000;
-$black-color-trans: rgba(0, 0, 0, 0.6);
+$black-color-trans: rgba(0, 0, 0, 0.1);
 $white-color: #FFFFFF;
 $b-dark-grey: #262626;
 $gray-color: #f8f9fa;
 $faded-green: #bee3b9;
 
 /** Action Colors **/
-$success-color: map-get($theming, 'betting');
-$danger-color: map-get($theming, 'vegas');
-$warning-color: #f39c12;
-$info-color: #3498db;
+$success-color: map-get($theming, 'success');
+$danger-color: map-get($theming, 'danger');
+$warning-color: map-get($theming, 'warning');
+$info-color: map-get($theming, 'info');
 
 /** Other Colors **/
 $secondary-color: #194484;
@@ -48,9 +53,7 @@ $hover-color: #8c8a8a;
 $footer-nav-color: #171717;
 $footer-nav-header-color: #307bb5;
 $footer-icon-background: rgba(185, 207, 222, 0.5);
-
-$footer-t-background-color: #191919;
-$aams-block-color: #307ab5;
+$footer-background-color: #191919;
 $copyright-grey: #666666;
 
 /** TODO: Remove if unused **/

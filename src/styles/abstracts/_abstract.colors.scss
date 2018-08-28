@@ -55,11 +55,3 @@ $footer-nav-header-color: #307bb5;
 $footer-icon-background: rgba(185, 207, 222, 0.5);
 $footer-background-color: #191919;
 $copyright-grey: #666666;
-
-/** TODO: Remove if unused **/
-:root {
-  // Custom variable values only support SassScript inside `#{}`.
-  @each $color, $value in $theming {
-    --#{$color}: #{$value};
-  }
-}

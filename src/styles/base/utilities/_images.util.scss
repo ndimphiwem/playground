@@ -8,13 +8,21 @@
     display: block;
     height: auto;
     width: 100%;
-
-    &.is--rounded {
-      border-radius: $radii-rounded;
-    }
   }
 
   &__is {
+    &--rounded {
+      border-radius: $radii-rounded;
+    }
+    
+    &--left {
+      float: left;
+    }
+
+    &--right {
+      float: right;
+    }
+
     @each $dim, $val in $dimensions {
       &--#{$val}by#{$val} {
         $calc: $val * 1;

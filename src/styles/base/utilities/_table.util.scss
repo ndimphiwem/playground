@@ -1,110 +1,21 @@
-/* TODO: Table usage is minimal, refactor to basic table */
-
-$table-bg-color: #111;
-$table-cell-border: green;
-$table-cell-border-width: blue;
-$table-cell-padding: 20px;
-$table-color: red;
-$color-invert: grey;
-
-%test-block {
-  display: block;
-  width: 100%;
-  table-layout: fixed;
+/* Tables */
+.u-table {
+	table-layout: fixed;
+	width: 100%;
   white-space: nowrap;
+  
+  td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 0.1px dotted $black-color-trans;
+  }
 }
 
-.u-table {
-  @extend %test-block;
-  background-color: $table-bg-color;
-  color: $table-color;
-  
-  td,th {
-    border: $table-cell-border;
-    border-width: $table-cell-border-width;
-    padding: $table-cell-padding;
-    vertical-align: top;
-
-    @each $name, $pair in $theming {
-      $color: $pair;
-      $color-invert: $pair + 1;
-      &.u-is-#{$name} {
-        background-color: $color;
-        border-color: $color;
-        color: $color-invert;
-      }
-    }
-    &.is-narrow {}
-    &.is-selected {}
-  }
-
-  th {
-    $table-cell-heading-color: orange;
-    color: $table-cell-heading-color;
-    text-align: left;
-  }
-  tr {
-    &.is-selected {
-      a.strong {}
-      td,th {}
-    }
-  }
-
-  thead {
-    td,th {}
-  }
-  tfoot {
-    td,th {}
-  }
-  tbody {
-    tr {
-      &:last-child {
-        td,th {
-
-        }
-      }
-    }
-  }
-  &.is-bordered {
-    td,th {}
-    tr {
-      &:last-child {
-        td,th {}
-      }
-    }
-  }
-  &.is-fullwidth {
+.table-responsive {
+    display: block;
     width: 100%;
-  }
-  &.is-hoverable {
-    tbody {
-      tr:not(.is-selected) {
-        &:hover {
-          $table-row-hover-bg: pink;
-          background-color: $table-row-hover-bg;
-        }
-      }
-    }
-  }
-  &.is-narrow {
-    td,th {
-      padding: 0.25em 0.5em;
-    }
-  }
-  &.is-striped {
-    tbody {
-      tr:not(.is-selected) {
-        &:nth-child(even) {
-          $table-row-even-hover-bg: purple;
-          background-color: $table-row-even-hover-bg;
-        }
-      }
-    }
-  }
-  .table-container {
-    @extend %test-block;
-    overflow: auto;
-    overflow-y: hidden;
-    max-width: 100%;
-  }
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 }

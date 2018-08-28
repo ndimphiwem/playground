@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HighlightModule } from 'ngx-highlightjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,7 +35,8 @@ import { CardsComponent } from './components/cards/cards.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HighlightModule.forRoot({ theme: 'googlecode' })
   ],
   providers: [],
   bootstrap: [AppComponent]

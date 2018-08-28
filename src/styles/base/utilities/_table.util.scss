@@ -2,14 +2,14 @@
 .u-table {
 	table-layout: fixed;
 	width: 100%;
-	white-space: nowrap;
-}
-
-td {
-	white-space: nowrap;
-	overflow: hidden;
-  text-overflow: ellipsis;
-  border: .5px solid #ebebeb;
+  white-space: nowrap;
+  
+  td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 0.1px dotted $black-color-trans;
+  }
 }
 
 .table-responsive {

@@ -36,7 +36,7 @@ import { CardsComponent } from './components/cards/cards.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HighlightModule.forRoot({ theme: 'googlecode' })
+    HighlightModule.forRoot({ theme: 'atelier-dune-light' })
   ],
   providers: [],
   bootstrap: [AppComponent]

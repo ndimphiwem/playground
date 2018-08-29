@@ -14,6 +14,9 @@
       <p class="u-has-text--centered">Center aligned text on all viewport sizes.</p>
       <p class="u-has-text--right">Right aligned text on all viewport sizes.</p>
     </div>
+    <div class="col-12">
+        <pre><code highlight [code]="textAlignment"></code></pre>
+    </div>
   </div>
 
   <div class="row u-margin--btm-md">
@@ -25,6 +28,9 @@
       <p class="u-is--uppercase">uppercased text.</p>
       <p class="u-is--capitalised">capitalized text.</p>
       <p class="u-is--italic">italic text.</p>
+    </div>
+    <div class="col-12">
+        <pre><code highlight [code]="textTransform"></code></pre>
     </div>
   </div>
 
@@ -39,14 +45,152 @@
       <p class="u-has-font--bolder">Very bold text.</p>
       <p class="u-is--italic">Italic text.</p>
     </div>
+    <div class="col-12">
+        <pre><code highlight [code]="fontWeight"></code></pre>
+    </div>
   </div>
+
+  <div class="row u-margin--btm-md">
+      <div class="col-12">
+        <hr>
+        <h2>Spacing</h2>
+        <hr>
+        <table class="u-table u-content u-padding--btm-sm">
+          <tr>
+            <th>Variable</th>
+            <th>Em</th>
+            <th>Pixel</th>
+          </tr>
+          <tr>
+            <td>$size-1</td>
+            <td>.75rem</td>
+            <td>12px</td>
+          </tr>
+          <tr>
+            <td>$size-2</td>
+            <td>.875rem</td>
+            <td>14px</td>
+          </tr>
+          <tr>
+            <td>$size-3</td>
+            <td>1rem</td>
+            <td>16px</td>
+          </tr>
+          <tr>
+            <td>$size-4</td>
+            <td>1.125rem</td>
+            <td>18px</td>
+          </tr>
+          <tr>
+            <td>$size-5</td>
+            <td>1.25rem</td>
+            <td>20px</td>
+          </tr>
+          <tr>
+            <td>$size-6</td>
+            <td>1.5rem</td>
+            <td>24px</td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
   <div class="row u-margin--btm-md">
     <div class="col-12">
       <hr>
-      <h2>Spacing</h2>
+      <h2>Paddings & Margins</h2>
       <hr>
-      ...
+
+      <table class="u-table u-content--center u-padding--btm-sm">
+        <tr>
+          <th>Shorthand</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>sm</td>
+          <td>small</td>
+        </tr>
+        <tr>
+          <td>md</td>
+          <td>medium</td>
+        </tr>
+        <tr>
+          <td>lg</td>
+          <td>large</td>
+        </tr>
+        <tr>
+          <td>xlg</td>
+          <td>extra large</td>
+        </tr>
+        <tr>
+          <td>h</td>
+          <td>horizontal</td>
+        </tr>
+        <tr>
+          <td>v</td>
+          <td>vertical</td>
+        </tr>
+        <tr>
+          <td>lft</td>
+          <td>left</td>
+        </tr>
+        <tr>
+          <td>rgt</td>
+          <td>right</td>
+        </tr>
+        <tr>
+          <td>tp</td>
+          <td>top</td>
+        </tr>
+        <tr>
+          <td>btm</td>
+          <td>bottom</td>
+        </tr>
+      </table>
+
+      <div class="col-12">
+          <div class="u-padding--btm-sm">
+            <h3>Uniform padding</h3>
+            <div class="bg-dealer u-display--inline-block u-padding--none u-margin--rgt-sm">
+              <div class="u-display--inline-block bg-wtrans">.u-padding--none</div>
+            </div>
+            <div class="bg-dealer u-display--inline-block u-padding--sm u-margin--rgt-sm">
+              <div class="u-display--inline-block bg-wtrans">.u-padding--sm</div>
+            </div>
+            <div class="bg-dealer u-display--inline-block u-padding--md u-margin--rgt-sm">
+              <div class="u-display--inline-block bg-wtrans">.u-padding--md</div>
+            </div>
+            <div class="bg-dealer u-display--inline-block u-padding--lg u-margin--rgt-sm">
+              <div class="u-display--inline-block bg-wtrans">.u-padding--lg</div>
+            </div>
+            <div class="bg-dealer u-display--inline-block u-padding--xlg u-margin--rgt-sm">
+              <div class="u-display--inline-block bg-wtrans">.u-padding--xlg</div>
+            </div>
+          </div>
+      </div>
+      <div class="col-12">
+          <pre><code highlight [code]="uniformPadding"></code></pre>
+      </div>
+      <div class="col-12">
+          <div class="u-margin--btm-sm">
+              <h3>Uniform margins</h3>
+              <div class="bg-poker u-display--inline-block u-margin--rgt-sm">
+                  <div class="u-display--inline-block bg-wtrans u-margin--none">.u-margin--none</div>
+              </div>
+              <div class="bg-poker u-display--inline-block u-margin--rgt-sm">
+                <div class="u-display--inline-block bg-wtrans u-margin--sm">.u-margin--sm</div>
+              </div>
+              <div class="bg-poker u-display--inline-block u-margin--rgt-sm">
+                <div class="u-display--inline-block bg-wtrans u-margin--md">.u-margin--md</div>
+              </div>
+              <div class="bg-poker u-display--inline-block u-margin--rgt-sm">
+                <div class="u-display--inline-block bg-wtrans u-margin--lg">.u-margin--lg</div>
+              </div>
+          </div>
+      </div>
+      <div class="col-12">
+          <pre><code highlight [code]="uniformMargins"></code></pre>
+      </div>
     </div>
   </div>
 
@@ -97,48 +241,54 @@
       <p><a href="#" class="c-btn__link text__warning">Warning link</a></p>
       <p><a href="#" class="c-btn__link text__info">Info link</a></p>
     </div>
+    <div class="col-12">
+        <pre><code highlight [code]="textAndLinks"></code></pre>
+    </div>
 
     <div class="col-12">
       <h3>Backgrounds</h3>
-      <div class="bg-primary u-content--center u-margin--btm-sm u-padding--sm">
+      <div class="bg-primary u-content--left u-margin--btm-sm u-padding--sm">
           <div class="text__primary--darken">.bg-primary .text__primary--darken</div>
       </div>
-      <div class="bg-secondary u-content--center u-margin--btm-sm u-padding--sm">
+      <div class="bg-secondary u-content--left u-margin--btm-sm u-padding--sm">
           <div class="text__secondary--darken">.bg-secondary .text__secondary--darken</div>
       </div> 
-      <div class="bg-vegas u-content--center u-margin--btm-sm u-padding--sm">
+      <div class="bg-vegas u-content--left u-margin--btm-sm u-padding--sm">
           <div class="text__vegas--darken">.bg-vegas .text__vegas--darken</div>
       </div> 
-      <div class="bg-poker u-content--center u-margin--btm-sm u-padding--sm">
+      <div class="bg-poker u-content--left u-margin--btm-sm u-padding--sm">
           <div class="text__poker--darken">.bg-poker .text__poker--darken</div>
       </div> 
-      <div class="bg-bingo u-content--center u-margin--btm-sm u-padding--sm">
+      <div class="bg-bingo u-content--left u-margin--btm-sm u-padding--sm">
           <div class="text__bingo--darken">.bg-bingo .text__bingo--darken</div>
       </div> 
-      <div class="bg-plus u-content--center u-margin--btm-sm u-padding--sm">
+      <div class="bg-plus u-content--left u-margin--btm-sm u-padding--sm">
           <div class="text__plus--darken">.bg-plus .text__plus--darken</div>
       </div> 
-      <div class="bg-vip u-content--center u-margin--btm-sm u-padding--sm">
+      <div class="bg-vip u-content--left u-margin--btm-sm u-padding--sm">
           <div class="text__vip--darken">.bg-vip .text__vip--darken</div>
       </div> 
-      <div class="bg-esport u-content--center u-margin--btm-sm u-padding--sm">
+      <div class="bg-esport u-content--left u-margin--btm-sm u-padding--sm">
           <div class="text__esport--darken">.bg-esport .text__esport--darken</div>
       </div>
-      <div class="bg-virtuals u-content--center u-margin--btm-sm u-padding--sm">
+      <div class="bg-virtuals u-content--left u-margin--btm-sm u-padding--sm">
           <div class="text__virtuals--darken">.bg-virtuals .text__virtuals--darken</div>
       </div>
-      <div class="bg-betting u-content--center u-margin--btm-sm u-padding--sm">
+      <div class="bg-betting u-content--left u-margin--btm-sm u-padding--sm">
           <div class="text__betting--darken">.bg-betting .text__betting--darken</div>
       </div>
-      <div class="bg-insider u-content--center u-margin--btm-sm u-padding--sm">
+      <div class="bg-insider u-content--left u-margin--btm-sm u-padding--sm">
           <div class="text__insider--darken">.bg-insider .text__insider--darken</div>
       </div>
-      <div class="bg-dealer u-content--center u-margin--btm-sm u-padding--sm">
+      <div class="bg-dealer u-content--left u-margin--btm-sm u-padding--sm">
           <div class="text__dealer--darken">.bg-dealer .text__dealer--darken</div>
       </div>
-      <div class="bg-betgames u-content--center u-margin--btm-sm u-padding--sm">
+      <div class="bg-betgames u-content--left u-margin--btm-sm u-padding--sm">
           <div class="text__betgames--darken">.bg-betgames .text__betgames--darken</div>
       </div>
+    </div>
+    <div class="col-12">
+        <pre><code highlight [code]="backgrounds"></code></pre>
     </div>
   </div>
 </div>

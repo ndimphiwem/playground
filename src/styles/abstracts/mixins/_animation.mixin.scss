@@ -6,8 +6,8 @@
 }
 
 @mixin animation($keyframe) {
-  -webkit-animation: $keyframe 1s ease-in-out infinite;
-  -moz-animation: $keyframe 1s ease-in-out infinite;
-  -o-animation: $keyframe 1s ease-in-out infinite;
-  animation: $keyframe 1s ease-in-out infinite
+  -webkit-animation: $keyframe $loading__duration $animation__timming infinite;
+  -moz-animation: $keyframe $loading__duration $animation__timming infinite;
+  -o-animation: $keyframe $loading__duration $animation__timming infinite;
+  animation: $keyframe $loading__duration $animation__timming infinite
 }

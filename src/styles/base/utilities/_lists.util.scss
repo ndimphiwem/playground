@@ -22,22 +22,22 @@
   }
 
   &--block {
-    display: block;
+    @extend .u-display--block;
     padding: 0;
   }
 
   &--inline-block {
-    display: inline-block;
+    @extend .u-display--inline-block;
     padding: 0;
   }
 
   &--inline {
-    display: inline;
+    @extend .u-display--inline;
     padding: 0;
   }
 
   &--table {
-    display: table-cell;
+    @extend .u-display--table;
     padding: 0;
   }
 }

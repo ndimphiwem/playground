@@ -30,3 +30,20 @@
     @content;
   }
 }
+
+@mixin loader () {
+  content: '';
+  display: inherit;
+  padding: $loader__padding;
+  margin: $loader__margin;
+  background: transparent;
+  border: 1px solid $body-color;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+  
+
+%loader {
+  @include loader();
+}

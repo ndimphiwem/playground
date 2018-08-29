@@ -173,23 +173,6 @@ $button-sizes: (
   }
 
   /** Button Modifiers  **/
-  &--loading {
-    display: inline-flex;
-    align-items: center;
-
-    &::before {
-      content: '';
-      display: inherit;
-      padding: 10px;
-      margin-right: 5px;
-      background: transparent;
-      border: 1px solid $body-color;
-      border-radius: 50%;
-      border-top-color: transparent;
-      border-bottom-color: transparent;
-      @include animation(loading);
-    }
-  }
   &--expanded {
     display: block;
     width: 100%;
@@ -224,6 +207,17 @@ $button-sizes: (
       @include position(0px);
       width: auto;
       transform: skew(-15deg);
+    }
+  }
+
+  &--loading {
+    display: inline-flex;
+    align-items: center;
+    pointer-events: none;
+
+    &::before {
+      @extend %loader;
+      @include animation(loading);
     }
   }
 

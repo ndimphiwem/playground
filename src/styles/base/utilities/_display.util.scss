@@ -1,4 +1,8 @@
 .u-display {
+  &--flex {
+    display: flex;
+  }
+
   &--block {
     display: block;
   }

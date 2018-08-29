@@ -1,0 +1,37 @@
+.u-pos {
+  &__is {
+    &--static {
+      position: static;
+    }
+
+    &--relative {
+      position: relative;
+    }
+
+    &--absolute {
+      position: absolute;
+    }
+
+    &--fixed {
+      position: fixed;
+    }
+  }
+
+  &__to {
+    &--top {
+      top: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+
+    &--bottom {
+      bottom: 0;
+    }
+    
+    &--left {
+      left: 0;
+    }
+  }
+}

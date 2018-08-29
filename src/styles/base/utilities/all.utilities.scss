@@ -1,10 +1,13 @@
+/** Single Responsibility Utilities **/ 
 @import 'display.util';
-@import 'typography.util';
-@import 'lists.util';
+@import 'position.util';
+
+/** Derived Utilities **/
 @import 'grid.util';
 @import 'typography.util';
-@import 'images.util';
 @import 'text.util';
+@import 'lists.util';
+@import 'images.util';
 @import 'sizing.util';
 @import 'color.util';
 @import 'table.util';

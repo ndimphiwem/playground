@@ -1,11 +1,11 @@
 /** Images Utility **/
 
 .u-image {
-  display: block;
-  position: relative;
+  @extend .u-display--block;
+  @extend .u-pos__is--relative;
 
   img {
-    display: block;
+    @extend .u-display--block;
     height: auto;
     width: 100%;
   }

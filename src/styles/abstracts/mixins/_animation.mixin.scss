@@ -4,3 +4,14 @@
   -o-transition: $property $animation__duration $animation__timming;
   transition: $property $animation__duration $animation__timming;
 }
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(359deg)
+  }
+}
+  

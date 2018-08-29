@@ -183,6 +183,17 @@ $button-sizes: (
     clear: both;
   }
 
+  &--loading {
+    color: transparent !important;
+    pointer-events: none;
+
+    &:after {
+      @extend %loader;
+      //@extend .u-content--center;
+      position: absolute;
+    }
+  }
+
   &--no-padding {
     padding: 0;
   }

@@ -183,6 +183,7 @@ $button-sizes: (
     clear: both;
   }
 
+  /** TODO: center loader on button **/
   &--loading {
     color: transparent !important;
     pointer-events: none;

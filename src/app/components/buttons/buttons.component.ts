@@ -13,12 +13,16 @@ export class ButtonsComponent implements OnInit {
   defaultButtons = `
 <button class="c-btn c-btn__default">Default</button>
 <button class="c-btn c-btn__primary">Primary</button>
+<button class="c-btn c-btn__secondary">Secondary</button>
 <button class="c-btn c-btn__success">Success</button>
 <button class="c-btn c-btn__warning">Warning</button>
-<button class="c-btn c-btn__danger">Danger</button>`;
+<button class="c-btn c-btn__danger">Danger</button>
+<button class="c-btn c-btn__link">Link</button>
+<button class="c-btn c-btn__default c-btn--loading">Loading</button>`;
   defaultButtonsFull = `
 <button class="c-btn c-btn__default c-btn--full">Default</button>
 <button class="c-btn c-btn__primary c-btn--full">Primary</button>
+<button class="c-btn c-btn__secondary c-btn--full">Secondary</button>
 <button class="c-btn c-btn__success c-btn--full">Success</button>
 <button class="c-btn c-btn__warning c-btn--full">Warning</button>
 <button class="c-btn c-btn__danger c-btn--full">Danger</button>`;

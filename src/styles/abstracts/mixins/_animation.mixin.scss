@@ -5,13 +5,9 @@
   transition: $property $animation__duration $animation__timming;
 }
 
-@keyframes spinAround {
-  from {
-    transform: rotate(0deg);
-  }
-  
-  to {
-    transform: rotate(359deg)
-  }
+@mixin animation($keyframe) {
+  -webkit-animation: $keyframe $loading__duration $animation__timming infinite;
+  -moz-animation: $keyframe $loading__duration $animation__timming infinite;
+  -o-animation: $keyframe $loading__duration $animation__timming infinite;
+  animation: $keyframe $loading__duration $animation__timming infinite
 }
-  

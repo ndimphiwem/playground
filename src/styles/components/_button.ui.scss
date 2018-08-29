@@ -183,18 +183,6 @@ $button-sizes: (
     clear: both;
   }
 
-  /** TODO: center loader on button **/
-  &--loading {
-    color: transparent !important;
-    pointer-events: none;
-
-    &:after {
-      @extend %loader;
-      //@extend .u-content--center;
-      position: absolute;
-    }
-  }
-
   &--no-padding {
     padding: 0;
   }
@@ -219,6 +207,17 @@ $button-sizes: (
       @include position(0px);
       width: auto;
       transform: skew(-15deg);
+    }
+  }
+
+  &--loading {
+    display: inline-flex;
+    align-items: center;
+    pointer-events: none;
+
+    &::before {
+      @extend %loader;
+      @include animation(loading);
     }
   }
 

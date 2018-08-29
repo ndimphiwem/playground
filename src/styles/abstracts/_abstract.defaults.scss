@@ -38,6 +38,9 @@ $grid-columns: 12 !default;
 /** Animation **/
 $animation__duration: .3s;
 $animation__timming: ease-out;
+$loading__duration: 1s;
+$loader__padding: 5px 7px;
+$loader__margin: 0 5px 0 0;
 
 /** Border **/
 $border-radii: 4px;

@@ -5,7 +5,6 @@
   text-align: center;
   line-height: 1;
   cursor: pointer;
-  border-radius: $btn-radii;
   position: relative;
   vertical-align: middle;
   text-decoration: none;
@@ -33,16 +32,15 @@
 }
 
 @mixin loader () {
-  animation: spinAround 500ms infinite linear;
-  border: 2px solid $gray-color;
-  border-radius: $radii-rounded;
-  border-right-color: transparent;
+  content: '';
+  display: inherit;
+  padding: $loader__padding;
+  margin: $loader__margin;
+  background: transparent;
+  border: 1px solid $body-color;
+  border-radius: 50%;
   border-top-color: transparent;
-  content: "";
-  display: block;
-  height: 1em;
-  position: relative;
-  width: 1em;
+  border-bottom-color: transparent;
 }
   
 

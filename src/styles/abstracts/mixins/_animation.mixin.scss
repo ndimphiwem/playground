@@ -4,3 +4,10 @@
   -o-transition: $property $animation__duration $animation__timming;
   transition: $property $animation__duration $animation__timming;
 }
+
+@mixin animation($keyframe) {
+  -webkit-animation: $keyframe 1s ease-in-out infinite;
+  -moz-animation: $keyframe 1s ease-in-out infinite;
+  -o-animation: $keyframe 1s ease-in-out infinite;
+  animation: $keyframe 1s ease-in-out infinite
+}

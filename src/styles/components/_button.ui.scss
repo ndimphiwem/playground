@@ -173,6 +173,23 @@ $button-sizes: (
   }
 
   /** Button Modifiers  **/
+  &--loading {
+    display: inline-flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      display: inherit;
+      padding: 10px;
+      margin-right: 5px;
+      background: transparent;
+      border: 1px solid $body-color;
+      border-radius: 50%;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+      @include animation(loading);
+    }
+  }
   &--expanded {
     display: block;
     width: 100%;

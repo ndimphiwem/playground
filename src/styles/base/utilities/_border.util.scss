@@ -1,0 +1,14 @@
+.u-border {
+  &--top {
+    border-top: 1px solid #000;
+  }
+  &--right {
+    border-left: 1px solid #000;
+  }
+  &--bottom {
+    border-bottom: 1px solid #000;
+  }
+  &--left {
+    border-left: 1px solid #000;
+  }
+}

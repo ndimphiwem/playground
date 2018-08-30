@@ -70,43 +70,43 @@ textAndLinks = `
 <p><a href="#" class="c-btn__link text__warning">Warning link</a></p>
 <p><a href="#" class="c-btn__link text__info">Info link</a></p>`;
 backgrounds = `
-<div class="bg-primary u-content--center u-margin--btm-sm u-padding--sm">
+<div class="bg-primary u-content--left u-margin--btm-sm u-padding--sm">
     <div class="text__primary--darken">.bg-primary .text__primary--darken</div>
 </div>
-<div class="bg-secondary u-content--center u-margin--btm-sm u-padding--sm">
+<div class="bg-secondary u-content--left u-margin--btm-sm u-padding--sm">
     <div class="text__secondary--darken">.bg-secondary .text__secondary--darken</div>
 </div>
-<div class="bg-vegas u-content--center u-margin--btm-sm u-padding--sm">
+<div class="bg-vegas u-content--left u-margin--btm-sm u-padding--sm">
     <div class="text__vegas--darken">.bg-vegas .text__vegas--darken</div>
 </div>
-<div class="bg-poker u-content--center u-margin--btm-sm u-padding--sm">
+<div class="bg-poker u-content--left u-margin--btm-sm u-padding--sm">
     <div class="text__poker--darken">.bg-poker .text__poker--darken</div>
 </div>
-<div class="bg-bingo u-content--center u-margin--btm-sm u-padding--sm">
+<div class="bg-bingo u-content--left u-margin--btm-sm u-padding--sm">
     <div class="text__bingo--darken">.bg-bingo .text__bingo--darken</div>
 </div>
-<div class="bg-plus u-content--center u-margin--btm-sm u-padding--sm">
+<div class="bg-plus u-content--left u-margin--btm-sm u-padding--sm">
     <div class="text__plus--darken">.bg-plus .text__plus--darken</div>
 </div>
-<div class="bg-vip u-content--center u-margin--btm-sm u-padding--sm">
+<div class="bg-vip u-content--left u-margin--btm-sm u-padding--sm">
     <div class="text__vip--darken">.bg-vip .text__vip--darken</div>
 </div>
-<div class="bg-esport u-content--center u-margin--btm-sm u-padding--sm">
+<div class="bg-esport u-content--left u-margin--btm-sm u-padding--sm">
     <div class="text__esport--darken">.bg-esport .text__esport--darken</div>
 </div>
-<div class="bg-virtuals u-content--center u-margin--btm-sm u-padding--sm">
+<div class="bg-virtuals u-content--left u-margin--btm-sm u-padding--sm">
     <div class="text__virtuals--darken">.bg-virtuals .text__virtuals--darken</div>
 </div>
-<div class="bg-betting u-content--center u-margin--btm-sm u-padding--sm">
+<div class="bg-betting u-content--left u-margin--btm-sm u-padding--sm">
     <div class="text__betting--darken">.bg-betting .text__betting--darken</div>
 </div>
-<div class="bg-insider u-content--center u-margin--btm-sm u-padding--sm">
+<div class="bg-insider u-content--left u-margin--btm-sm u-padding--sm">
     <div class="text__insider--darken">.bg-insider .text__insider--darken</div>
 </div>
-<div class="bg-dealer u-content--center u-margin--btm-sm u-padding--sm">
+<div class="bg-dealer u-content--left u-margin--btm-sm u-padding--sm">
     <div class="text__dealer--darken">.bg-dealer .text__dealer--darken</div>
 </div>
-<div class="bg-betgames u-content--center u-margin--btm-sm u-padding--sm">
+<div class="bg-betgames u-content--left u-margin--btm-sm u-padding--sm">
     <div class="text__betgames--darken">.bg-betgames .text__betgames--darken</div>
 </div>`;
   constructor() { }

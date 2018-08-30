@@ -55,6 +55,13 @@ export class ImagesComponent implements OnInit {
 <img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg" class="u-image u-image__is--256by256">
 </div>
 <div class="col">256px * 256px</div>`;
+  responsive = `
+<img src="https://via.placeholder.com/1151x250" class="" alt="">`;
+  aligning = `
+<img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg" class="u-image__is--left u-image__is--256by256">
+<img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg" class="u-image__is--right u-image__is--256by256">`;
+  rounded = `
+<img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg" class="u-image u-image__is--rounded" alt="float-left"/>`;
   constructor() { }
 
   ngOnInit() {

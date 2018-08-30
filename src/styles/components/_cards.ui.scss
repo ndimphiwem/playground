@@ -4,36 +4,18 @@
 /**  Cards Block **/
 .c-card {
   $this: &;
-  background-color: $card-bg-color;
-  @include shadow(0, 2px, 3px, 0, $shadow-color, 1);
-  color: $b-dark-grey;
-  max-width: 100%;
-  position: relative;
+  @extend %card;
 
   /** Card elements **/
   &__header {
-    background-color: $card-header-bg-color;
-    align-items: stretch;
-    @include shadow(0, 1px, 2px, 0, $shadow-color);
-    display: flex;
+    padding: $card-padding;
 
     &--title {
-      align-items: center;
-      color: $b-dark-grey;
-      display: flex;
-      flex-grow: 1;
       font-weight: $font__weight--bold;
     }
 
-    &--is-centered {
-      @extend .u-grid-justify--center;
-    }
-
     &--icon {
-      align-items: center;
       cursor: pointer;
-      display: flex;
-      justify-content: center;
     }
   }
 
@@ -43,45 +25,36 @@
   }
 
   &__content {
-    background-color: $card-content-bg-color;
-    padding: 1.5rem;
+    padding: $card-padding;
+    border-top: $card-footer-border;
 
     &--title {
       @extend #{$this}__header--title;
     }
 
     &--subtitle {
-      align-items: center;
-      color: $b-dark-grey;
-      display: flex;
-      flex-grow: 1;
       font-weight: $font__weight--bold;
     }
   }
 
   &__footer {
-    background-color: $card-footer-bg-color;
-    border-top: $card-footer-border-top;
-    align-items: stretch;
-    display: flex;
-
-    &--item {
-      align-items: center;
-      display: flex;
-      flex-basis: 0;
-      flex-grow: 1;
-      flex-shrink: 0;
-      justify-content: center;
-      padding: 0.75rem;
-      &:not(:last-child) {
-        border-right: $card-footer-border-top;
-      }
-    }
+    border-top: $card-footer-border;
+    padding: $card-padding;
   }
 
   &__media {
     &:not(:last-child) {
       margin-bottom: 0.75rem;
+    }
+  }
+
+  &--no-gutters {
+    padding-left: 0;
+    padding-right: 0;
+
+    > [class*="card__"] {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }

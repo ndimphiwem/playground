@@ -1,10 +1,10 @@
 <div class="container">
-  <div class="row bg-dealer u-margin--btm-md">
+  <div class="row bg-betting u-margin--btm-md">
     <div class="col-12">
       <h1 class="u-has-font--bolder u-is--uppercase u-margin--btm-sm u-padding--sm u-padding--none text-dealer-lighten">Forms</h1>
     </div>
   </div>
-  <form>
+  <form class="u-margin--btm-md">
     <div class="row">
       <div class="col-12">
         <label>Input Label</label>
@@ -13,16 +13,16 @@
     </div>
     <div class="row">
       <div class="col-4">
-        <label>Input Label</label>
+        <label>Input Valid</label>
         <input class="c-input c-input__has--success" type="text" placeholder="col-4" />
       </div>
       <div class="col-4">
-        <label>Input Label
+        <label>Input Warning
         </label>
         <input class="c-input c-input__has--warning" type="text" placeholder="col-4" />
       </div>
       <div class="col-4">
-        <label>Input Label</label>
+        <label>Input Error</label>
         <input class="c-input c-input__has--error" type="text" placeholder="col-4" />
       </div>
     </div>
@@ -71,4 +71,9 @@
       </div>
     </div>
   </form>
+  <div class="row">
+    <div class="col-12">
+      <pre><code highlight [code]="form"></code></pre>
+    </div>
+  </div>
 </div>

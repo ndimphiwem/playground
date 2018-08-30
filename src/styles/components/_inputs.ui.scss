@@ -14,6 +14,14 @@
     }
   }
 
+  &__text {
+      min-height: $base-text-height
+  }
+
+  &__textarea {
+      min-height: $base-textarea-height;
+  }
+
   &__has {
     &--success {
       @include focus {

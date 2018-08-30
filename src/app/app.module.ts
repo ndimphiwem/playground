@@ -16,6 +16,7 @@ import { UtilitiesComponent } from './components/utilities/utilities.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { PanelsComponent } from './components/panels/panels.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { TestComponent } from './components/test/test.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CardsComponent } from './components/cards/cards.component';
     UtilitiesComponent,
     TabsComponent,
     PanelsComponent,
-    CardsComponent
+    CardsComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

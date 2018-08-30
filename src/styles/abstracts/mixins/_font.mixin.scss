@@ -1,5 +1,5 @@
 // Font Mixin
-$font-path: 'https://cdn.gmgamingsystems.com/Global/fonts/interface/';
+$font-path: '#{$cdn}/Global/fonts/interface/';
 
 /** Example Usage: 
 * @include fontFace('InterFaceCorp-Regular')

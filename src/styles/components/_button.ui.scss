@@ -31,7 +31,8 @@ $button-sizes: (
  }
 
   /** Button Elements  **/
-  &__default {
+  /** TODO: test if this method is better @at-root **/
+  @at-root #{&}__default {
     background-color: $default-color;
     @include hover {
       border-color: $default-color;

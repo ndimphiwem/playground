@@ -7,6 +7,7 @@ $theme: 'primary';
 $debug: false;
 
 /** URLs **/
+$cdn: "https://cdn.gmgamingsystems.com";
 $dev: "https://cms1.gmgamingsystems.dev.com";
 $prod: "https://cms1.gmgamingsystems.com";
 $env: if($debug, $dev, $prod);

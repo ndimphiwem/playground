@@ -10,7 +10,7 @@
   text-decoration: none;
   transition: $animation__duration $animation__timming;
   transition-property: background-color, color;
-  // @include animate(background-color, color);
+  // @include transition(background-color, color);
   border: ($border-radii - 2) solid transparent;
   font-weight: $font__weight;
 

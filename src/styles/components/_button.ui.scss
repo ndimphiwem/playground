@@ -12,6 +12,7 @@ $button-sizes: (
 .c-btn {
   $this: &;
   @extend %button;
+  @include transition(all);
 
   @mixin make-outline(
     $color, 
@@ -52,6 +53,14 @@ $button-sizes: (
       border-color: $btn-primary;
       background-color: $white-color;
       color: $btn-primary;
+    }
+
+    &--outline {
+      @include make-outline(
+       $btn-primary, 
+       $active-background: $btn-primary, 
+       $active-border: $btn-primary
+      );
     }
   }
 
@@ -138,24 +147,6 @@ $button-sizes: (
     width: 100%;
     padding: 10px 10px;
     background-color: $faded-green;
-  }
-
-  &__tab {
-    width: 100%;
-    background: none; 
-    color: $white-color;
-    text-decoration: none;
-    background-color: transparent;
-    border: 0;
-
-    &--active {
-      background: rgba($btn-primary, 0.5); 
-      border-bottom: 5px solid $btn-primary;
-    }
-
-    @include hover {
-      border-bottom: 5px solid $btn-primary;
-    }
   }
 
   &__input {

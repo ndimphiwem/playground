@@ -1,5 +1,5 @@
 %card {
-  @include shadow(0, 2px, 3px, 0, $shadow-color, 1); 
+  @include shadow(0, 2px, 3px, 0, $shadow-color, true); 
   background-color: $card-bg-color;
   color: $b-dark-grey;
   max-width: 100%;

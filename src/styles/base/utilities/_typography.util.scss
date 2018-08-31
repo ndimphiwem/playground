@@ -1,9 +1,7 @@
 /** Typography Utility **/
 .u-has-font {
-  &--normal {
-    font-weight: normal;
-  }
-
+  font-weight: normal;
+  
   &--light {
     font-weight: $font__weight;
   }

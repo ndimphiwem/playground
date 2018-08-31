@@ -3,7 +3,7 @@
   width: $base-input-width;
   margin: $base-input-margin;
   padding: $base-input-padding;
-  border: 1px solid $border-color;
+  border: $border-1 $border-color;
   @include animate(all);
 
   @mixin focus {

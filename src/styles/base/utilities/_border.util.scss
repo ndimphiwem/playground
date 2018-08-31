@@ -1,14 +1,17 @@
 .u-border {
+  $this: $border-1 $border-color;
+  border: $this;
+
   &--top {
-    border-top: 1px solid #000;
+    border-top: $this;
   }
   &--right {
-    border-left: 1px solid #000;
+    border-right: $this;
   }
   &--bottom {
-    border-bottom: 1px solid #000;
+    border-bottom: $this;
   }
   &--left {
-    border-left: 1px solid #000;
+    border-left: $this;
   }
 }

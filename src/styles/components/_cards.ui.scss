@@ -44,17 +44,15 @@
 
   &__media {
     &:not(:last-child) {
-      margin-bottom: 0.75rem;
+      margin-bottom: $size-1;
     }
   }
 
   &--no-gutters {
-    padding-left: 0;
-    padding-right: 0;
+    @extend .u-padding--h-none;
 
     > [class*="card__"] {
-      padding-left: 0;
-      padding-right: 0;
+      @extend .u-padding--h-none;
     }
   }
 }

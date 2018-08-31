@@ -1,3 +1,157 @@
-<p>
-  tabs works!
-</p>
+<div class="row bg-betting u-margin--btm-md">
+  <div class="col-12">
+    <h1 class="u-has-font--bolder u-is--uppercase u-padding--sm">Tabs</h1>
+  </div>
+</div>
+<div class="row u-margin--btm-md">
+  <div class="col-12">
+    <h2 class="u-has-font--bolder u-is--uppercase u-padding--none">Default Tabs</h2>
+  </div>
+</div>
+<div class="row u-margin--btm-md">
+  <div class="col-12">
+    <h2>Standard tabs</h2>
+  </div>
+  <div class="col-md-3">
+    <ul class="c-tabs bg-esport">
+      <li class="c-tabs__item">
+        <a class="c-tabs__link" role="button">Tab 1</a>
+      </li>
+      <li class="c-tabs__item">
+        <a class="c-tabs__link" role="button">Tab 2</a>
+      </li>
+      <li class="c-tabs__item">
+        <a class="c-tabs__link" role="button">Tab 3</a>
+      </li>
+      <li class="c-tabs__item">
+        <a class="c-tabs__link" role="button">Tab 4</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-12">
+    <pre><code highlight [code]="standardTabs"></code></pre>
+  </div>
+</div>
+<div class="row u-margin--btm-md">
+  <div class="col-12">
+    <h2>Filled tabs
+      <small>(wrap to the container)</small>
+    </h2>
+  </div>
+  <div class="col-md-3">
+    <ul class="c-tabs bg-betting">
+      <li class="c-tabs__item c-tabs__item--filled">
+        <a class="c-tabs__link" role="button">Tab 1</a>
+      </li>
+      <li class="c-tabs__item c-tabs__item--filled">
+        <a class="c-tabs__link" role="button">Tab 2</a>
+      </li>
+      <li class="c-tabs__item c-tabs__item--filled">
+        <a class="c-tabs__link" role="button">Tab 3</a>
+      </li>
+      <li class="c-tabs__item c-tabs__item--filled">
+        <a class="c-tabs__link" role="button">Tab 4</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-12">
+    <pre><code highlight [code]="filledTabs"></code></pre>
+  </div>
+</div>
+<div class="row u-margin--btm-md">
+  <div class="col-12">
+    <h2>Vertical tabs</h2>
+  </div>
+  <div class="col-6 col-md-1">
+    <ul class="c-tabs c-tabs__vertical bg-secondary">
+      <li class="c-tabs__item">
+        <a class="c-tabs__link" role="button">Tab 1</a>
+      </li>
+      <li class="c-tabs__item">
+        <a class="c-tabs__link" role="button">Tab 2</a>
+      </li>
+      <li class="c-tabs__item">
+        <a class="c-tabs__link" role="button">Tab 3</a>
+      </li>
+      <li class="c-tabs__item">
+        <a class="c-tabs__link" role="button">Tab 4</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-12">
+    <pre><code highlight [code]="verticalTabs"></code></pre>
+  </div>
+</div>
+<div class="row u-margin--btm-md">
+  <div class="col-12">
+    <h2 class="u-has-font--bolder u-is--uppercase u-padding--none">Custom Tabs</h2>
+  </div>
+</div>
+<div class="row u-margin--btm-md">
+  <div class="col-12">
+    <h2>Tabs using buttons instead of tab links</h2>
+    <div class="row u-margin--btm-md no-gutters">
+      <div class="col-md-3">
+        <ul class="c-tabs bg-vip">
+          <li class="c-tabs__item">
+            <a class="c-btn c-btn__primary" role="button">Tab 1</a>
+          </li>
+          <li class="c-tabs__item">
+            <a class="c-btn c-btn__primary" role="button">Tab 2</a>
+          </li>
+          <li class="c-tabs__item">
+            <a class="c-btn c-btn__primary" role="button">Tab 3</a>
+          </li>
+          <li class="c-tabs__item">
+            <a class="c-btn c-btn__primary" role="button">Tab 4</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12">
+        <pre><code highlight [code]="customTabs"></code></pre>
+      </div>
+    </div>
+    <div class="row u-margin--btm-md no-gutters">
+      <div class="col-md-3">
+        <ul class="c-tabs">
+          <li class="c-tabs__item c-tabs__item--filled">
+            <a class="c-btn c-btn__warning--outline" role="button">Tab 1</a>
+          </li>
+          <li class="c-tabs__item c-tabs__item--filled">
+            <a class="c-btn c-btn__warning--outline" role="button">Tab 2</a>
+          </li>
+          <li class="c-tabs__item c-tabs__item--filled">
+            <a class="c-btn c-btn__warning--outline" role="button">Tab 3</a>
+          </li>
+          <li class="c-tabs__item c-tabs__item--filled">
+            <a class="c-btn c-btn__warning--outline" role="button">Tab 4</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12">
+        <pre><code highlight [code]="customTabsFilled"></code></pre>
+      </div>
+    </div>
+    <div class="row u-margin--btm-md no-gutters">
+      <div class="col-6 col-md-1">
+        <ul class="c-tabs c-tabs__vertical bg-secondary">
+          <li class="c-tabs__item">
+            <a class="c-btn c-btn__secondary" role="button">Tab 1</a>
+          </li>
+          <li class="c-tabs__item">
+            <a class="c-btn c-btn__secondary" role="button">Tab 2</a>
+          </li>
+          <li class="c-tabs__item">
+            <a class="c-btn c-btn__secondary" role="button">Tab 3</a>
+          </li>
+          <li class="c-tabs__item">
+            <a class="c-btn c-btn__secondary" role="button">Tab 4</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12">
+        <pre><code highlight [code]="customTabsVertical"></code></pre>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,9 +1,52 @@
+//TODO: There's some overuse of nested classes, this needs to be addressed
 .c-tabs {
-    background-color: $body-color;
-    list-style-type: none;
     display: flex;
-
+    flex-wrap: wrap;
+    list-style: none;
     &__vertical {
         flex-direction: column;
+        > .c-tabs__item {
+            display: flex;
+            >[class*="c-tabs"],
+            >[class*="c-btn"] {
+                flex-grow: 1;
+            }
+        }
+    }
+    &__item {
+        &--filled {
+            display: flex;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
+
+            >[class*="c-tabs"],
+            >[class*="c-btn"] {
+                flex-grow: 1;
+            }
+        }
+    }
+    &__link {
+        @include transition(all);
+        display: block;
+        line-height: 1;
+        cursor: pointer;
+        padding: 10px 15px;
+        text-decoration: none;
+        text-align: center;
+        background-color: transparent;
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        border-bottom: 5px solid transparent;
+        color: $default-tab-color;
+        &--active {
+            background: rgba($btn-primary, 0.5);
+            border-bottom: 5px solid $btn-primary;
+        }
+        @include hover {
+            border-bottom: 5px solid $btn-primary;
+            background: rgba($btn-primary, 0.5);
+        }
     }
 }

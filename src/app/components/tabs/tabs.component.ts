@@ -7,6 +7,108 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabsComponent implements OnInit {
 
+  standardTabs =  `
+<div class="col-md-3">
+  <ul class="c-tabs bg-esport">
+    <li class="c-tabs__item">
+      <a class="c-tabs__link" role="button">Tab 1</a>
+    </li>
+    <li class="c-tabs__item">
+      <a class="c-tabs__link" role="button">Tab 2</a>
+    </li>
+    <li class="c-tabs__item">
+      <a class="c-tabs__link" role="button">Tab 3</a>
+    </li>
+    <li class="c-tabs__item">
+      <a class="c-tabs__link" role="button">Tab 4</a>
+    </li>
+  </ul>
+</div>`;
+  filledTabs =  `
+<div class="col-md-3">
+  <ul class="c-tabs bg-betting">
+    <li class="c-tabs__item c-tabs__item--filled">
+      <a class="c-tabs__link" role="button">Tab 1</a>
+    </li>
+    <li class="c-tabs__item c-tabs__item--filled">
+      <a class="c-tabs__link" role="button">Tab 2</a>
+    </li>
+    <li class="c-tabs__item c-tabs__item--filled">
+      <a class="c-tabs__link" role="button">Tab 3</a>
+    </li>
+    <li class="c-tabs__item c-tabs__item--filled">
+      <a class="c-tabs__link" role="button">Tab 4</a>
+    </li>
+  </ul>
+</div>`;
+  verticalTabs =  `
+<div class="col-6 col-md-1">
+  <ul class="c-tabs c-tabs__vertical bg-secondary">
+    <li class="c-tabs__item">
+      <a class="c-tabs__link" role="button">Tab 1</a>
+    </li>
+    <li class="c-tabs__item">
+      <a class="c-tabs__link" role="button">Tab 2</a>
+    </li>
+    <li class="c-tabs__item">
+      <a class="c-tabs__link" role="button">Tab 3</a>
+    </li>
+    <li class="c-tabs__item">
+      <a class="c-tabs__link" role="button">Tab 4</a>
+    </li>
+  </ul>
+</div>`;
+  customTabs =  `
+<div class="col-md-3">
+  <ul class="c-tabs bg-vip">
+    <li class="c-tabs__item">
+      <a class="c-btn c-btn__primary" role="button">Tab 1</a>
+    </li>
+    <li class="c-tabs__item">
+      <a class="c-btn c-btn__primary" role="button">Tab 2</a>
+    </li>
+    <li class="c-tabs__item">
+      <a class="c-btn c-btn__primary" role="button">Tab 3</a>
+    </li>
+    <li class="c-tabs__item">
+      <a class="c-btn c-btn__primary" role="button">Tab 4</a>
+    </li>
+  </ul>
+</div>`;
+  customTabsFilled =  `
+<div class="col-md-3">
+  <ul class="c-tabs">
+    <li class="c-tabs__item c-tabs__item--filled">
+      <a class="c-btn c-btn__warning--outline" role="button">Tab 1</a>
+    </li>
+    <li class="c-tabs__item c-tabs__item--filled">
+      <a class="c-btn c-btn__warning--outline" role="button">Tab 2</a>
+    </li>
+    <li class="c-tabs__item c-tabs__item--filled">
+      <a class="c-btn c-btn__warning--outline" role="button">Tab 3</a>
+    </li>
+    <li class="c-tabs__item c-tabs__item--filled">
+      <a class="c-btn c-btn__warning--outline" role="button">Tab 4</a>
+    </li>
+  </ul>
+</div>`;
+  customTabsVertical =  `
+<div class="col-6 col-md-1">
+  <ul class="c-tabs c-tabs__vertical bg-secondary">
+    <li class="c-tabs__item">
+      <a class="c-btn c-btn__secondary" role="button">Tab 1</a>
+    </li>
+    <li class="c-tabs__item">
+      <a class="c-btn c-btn__secondary" role="button">Tab 2</a>
+    </li>
+    <li class="c-tabs__item">
+      <a class="c-btn c-btn__secondary" role="button">Tab 3</a>
+    </li>
+    <li class="c-tabs__item">
+      <a class="c-btn c-btn__secondary" role="button">Tab 4</a>
+    </li>
+  </ul>
+</div>`;
   constructor() { }
 
   ngOnInit() {

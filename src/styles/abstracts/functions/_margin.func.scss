@@ -1,14 +1,14 @@
-// @FUNCTION
+// @FUNCTION @return half the size passed in
 @function halve ($size) {
   @return $size / 2;
 }
 
-// @FUNCTION
+// @FUNCTION @return double the size passed in
 @function double ($size) {
   @return $size * 2;
 }
 
-// @FUNCTION
+// @FUNCTION @return quarter of the size passed in
 @function quarter ($size) {
   @return halve($size) / 2;
 }

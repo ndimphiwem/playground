@@ -5,8 +5,8 @@
 	display: inline;
 	line-height: $font__line-height;
 	font-size: text-scale('base');
-	color: $primary-color;
-	border: 1px solid $primary-color;
+	color: $default-color;
+	border: $border-1 $default-color;
 	text-align: center;
 	white-space: nowrap;
 	padding: 3px 4px;
@@ -15,27 +15,32 @@
 
   /** Label Elements **/
   &__primary {
-    color: $info-color;
-		border: 1px solid $info-color;
+    color: $primary-color;
+		border: $border-1 $primary-color;
   }
 
   &__success {
     color: $success-color;
-		border: 1px solid $success-color;
+		border: $border-1 $success-color;
   }
 
   &__warning {
     color: $warning-color;
-		border: 1px solid $warning-color;
+		border: $border-1 $warning-color;
   }
 
   &__danger {
     color: $danger-color;
-		border: 1px solid $danger-color;
+		border: $border-1 $danger-color;
+  }
+
+  &__info {
+    color: $info-color;
+		border: $border-1 $info-color;
   }
 
   /** Label Modifiers **/
   &--no-b-color {
-    border: 1px solid transparent;
+    border: $border-1 transparent;
   }
 }

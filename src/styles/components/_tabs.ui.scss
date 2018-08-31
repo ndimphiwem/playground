@@ -41,12 +41,13 @@
         border-bottom: 5px solid transparent;
         color: $default-tab-color;
         &--active {
-            background: rgba($btn-primary, 0.5);
-            border-bottom: 5px solid $btn-primary;
+          background: rgba($btn-primary, 0.5); 
+          border-bottom: halve($size-0) solid $btn-primary;
         }
+    
         @include hover {
-            border-bottom: 5px solid $btn-primary;
-            background: rgba($btn-primary, 0.5);
+          background: rgba($btn-primary, 0.5); 
+          border-bottom: halve($size-0) solid $btn-primary;
         }
     }
 }

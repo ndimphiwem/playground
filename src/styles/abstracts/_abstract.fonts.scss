@@ -12,14 +12,19 @@ $font__weight--bold: $font__weight + 200;
 $font__weight--bolder: $font__weight--bold + 100;
 
 /** Typography Sizes **/
-$size-1: .75rem;
-$size-2: .875rem;
+$size-0: 0.625rem;
+$size-1: 0.75rem;
+$size-2: 0.875rem;
 $size-3: 1rem;
 $size-4: 1.125rem;
 $size-5: 1.25rem;
 $size-6: 1.5rem;
 
 $font-size__settings: (
+  'xxs': (
+    font-size: $size-0, // 12px
+    line-height: $font__line-height
+  ),
   'xs': (
     font-size: $size-1, // 12px
     line-height: $font__line-height

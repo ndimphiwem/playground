@@ -1,6 +1,6 @@
-%card { 
+%card {
+  @include shadow(0, 2px, 3px, 0, $shadow-color, true); 
   background-color: $card-bg-color;
-  @include shadow(0, 2px, 3px, 0, $shadow-color, 1);
   color: $b-dark-grey;
   max-width: 100%;
   position: relative;

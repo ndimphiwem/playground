@@ -5,6 +5,7 @@ $alignments:(
   'right': 'right'
 );
 
+/** TODO: Check if this is not a dublicate of grid util **/
 .u-content {
   &--center {
     @extend %center-content; 

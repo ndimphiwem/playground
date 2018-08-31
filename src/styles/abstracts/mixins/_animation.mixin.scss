@@ -11,3 +11,19 @@
   -o-animation: $keyframe $loading__duration $animation__timming infinite;
   animation: $keyframe $loading__duration $animation__timming infinite
 }
+
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}

@@ -7,11 +7,11 @@
     color: $val;
 
     &--lighten {
-      color: lighten($val, 15%);
+      color: lighten($val, 25%);
     }
 
     &--darken {
-      color: darken($val, 15%);
+      color: darken($val, 25%);
     }
   }
 }

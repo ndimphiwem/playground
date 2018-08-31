@@ -1,25 +1,26 @@
 /** Site Colors **/
 
+// Themes
+@import '../themes/casino/variables';
+//@import '../themes/sports/variables';
+//@import '../themes/inplay/variables';
+//@import '../themes/vegas/variables';
+
+
 /** Brand Theme Colors **/
 $theming: (
-  primary:#439539,
   secondary: #6c757d,
+  inplay: #acc540,
+  sports:#439539,
+  casino: #0054a4,
+  lcasino: #66cae0,
   vegas: #ed1c24,
-  poker: #f78e1e,
-  bingo: #ef5ba1,
-  plus: #FFC421,
-  vip: #939598,
-  esport: #642282,
-  virtuals: #0054a4,
-  betting: #acc540,
-  insider: #81c341,
-  dealer: #66cae0, 
-  betgames: #a01045,
   success: #acc540,
   danger: #ed1c24,
   warning: #f39c12,
   info:#3498db,
-  wtrans: rgba(255,255,255,0.4)
+  wtrans: rgba(255,255,255,0.4),
+  primary: $theme-color
 ) !default;
 
 /** Theme related Vars **/

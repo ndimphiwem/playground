@@ -7,8 +7,8 @@
   }
 }
 
-@mixin shadow( $x, $y, $blur: 0, $spread: 0, $color: $shadow-color, $to: 0 ) {
-  @if ($to > 0) {
+@mixin shadow( $x, $y, $blur: 0, $spread: 0, $color: $shadow-color, $multiple: false ) {
+  @if ($multiple) {
     -webkit-box-shadow: $x $y $blur $spread $color, 0 0 1px 0 $color;
     -moz-box-shadow: $x $y $blur $spread $color, 0 0 1px 0 $color;
     box-shadow: $x $y $blur $spread $color, 0 0 1px 0 $color;

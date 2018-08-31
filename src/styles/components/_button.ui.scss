@@ -1,6 +1,6 @@
 /** @COMPONENT **/
 
-/** Button Sizes **/
+// Button Sizes 
 $button-sizes: (
   sm: 7px 12px,
   md: 14px 14px,
@@ -8,7 +8,7 @@ $button-sizes: (
   xtra: 16px 30px
 ) !default;
 
- /** Button Block  **/
+ // Button Block
 .c-btn {
   $this: &;
   @extend %button;
@@ -31,9 +31,7 @@ $button-sizes: (
     }
  }
 
-  /** Button Elements  **/
-  /** TODO: test if this method is better @at-root **/
-  @at-root #{&}__default {
+  &__default {
     background-color: $default-color;
     @include hover {
       border-color: $default-color;
@@ -133,19 +131,19 @@ $button-sizes: (
     /** Inheriting From c-btn__link 
     * Then Modifying the hover state
     **/
-    &--#{$theme} {
-      @extend #{$this}__link;
-      @include hover {
-        color: $btn-primary; // This needs to come from theme vars
-      }     
-    }
+    // &--#{$theme} {
+    //   @extend #{$this}__link;
+    //   @include hover {
+    //     color: $btn-primary; // This needs to come from theme vars
+    //   }     
+    // }
   }
 
   &__feed {
     display: flex;
     @extend .u-grid-justify--between;
     width: 100%;
-    padding: 10px 10px;
+    padding: $size-0 $size-0;
     background-color: $faded-green;
   }
 
@@ -164,7 +162,7 @@ $button-sizes: (
     }
   }
 
-  /** Button Modifiers  **/
+  // Button Modifiers
   &--expanded {
     display: block;
     width: 100%;
@@ -190,7 +188,7 @@ $button-sizes: (
     &:before {
       border-width: $b-bw;
       @include position(0px, auto, 0px, -9px);
-      width: 20px;
+      width: $size-5;
       transform: none;
     }
 
@@ -238,10 +236,11 @@ $button-sizes: (
   }
 
   &--clear {
+    $size: $size-1 / 2 + 1;
     border: 0;
     background: none;
     border-radius: 0;
     cursor: pointer;
-    padding: 7px 7px 0 0;
+    padding: $size $size 0 0;
   }
 }

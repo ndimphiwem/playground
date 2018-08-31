@@ -4,7 +4,7 @@
 .c-panel {
 	padding: $panel-padding;
 	margin: $panel-margins;
-	border: 1px solid $black-color-trans;
+	border: $border-1 $black-color-trans;
 	@if ($panel-width != null) {
 		width: $panel-width;
 	}

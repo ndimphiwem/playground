@@ -3,11 +3,13 @@
 @import 'abstract.defaults';
 @import 'abstract.colors';
 @import 'abstract.fonts';
-@import 'abstract.animations';
+
 
 // Functions / Mixins
 @import 'mixins/all.mixins';
 @import 'functions/all.functions';
 
+// Derived
+@import 'abstract.animations';
 
 

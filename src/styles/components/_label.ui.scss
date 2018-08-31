@@ -5,8 +5,8 @@
 	display: inline;
 	line-height: $font__line-height;
 	font-size: text-scale('base');
-	color: $primary-color;
-	border: $border-1 $primary-color;
+	color: $default-color;
+	border: $border-1 $default-color;
 	text-align: center;
 	white-space: nowrap;
 	padding: 3px 4px;
@@ -15,8 +15,8 @@
 
   /** Label Elements **/
   &__primary {
-    color: $info-color;
-		border: $border-1 $info-color;
+    color: $primary-color;
+		border: $border-1 $primary-color;
   }
 
   &__success {
@@ -32,6 +32,11 @@
   &__danger {
     color: $danger-color;
 		border: $border-1 $danger-color;
+  }
+
+  &__info {
+    color: $info-color;
+		border: $border-1 $info-color;
   }
 
   /** Label Modifiers **/

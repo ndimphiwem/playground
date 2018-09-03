@@ -46,3 +46,8 @@
 %loader {
   @include loader();
 }
+
+%flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+}

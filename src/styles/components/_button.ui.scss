@@ -139,12 +139,24 @@ $button-sizes: (
     // }
   }
 
+
+  /** FIX: feed button, smaller devices, misaligned text **/
   &__feed {
     display: flex;
-    @extend .u-grid-justify--between;
+    @extend %flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     width: 100%;
     padding: $size-0 $size-0;
     background-color: $faded-green;
+
+    &--item {
+      background-color: red;
+      &:nth-child(2) {
+        background-color: green;
+      }
+    }
   }
 
   &__input {

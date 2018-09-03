@@ -1,10 +1,5 @@
 /** Icon sizes **/
-$icon-sizes: (
-  sm: 32px,
-  md: 64px,
-  lg: 128px,
-  xlg: 256px
-) !default;
+$icon-sizes: (sm: 32px, md: 64px, lg: 128px, xlg: 256px) !default;
 
 .c-icon {
     display: inline-block;
@@ -15,89 +10,97 @@ $icon-sizes: (
     background-repeat: no-repeat;
 
     &__americanfootball {
-        background-image: url('./assets/icons/americanfootball.svg');
+      background-image: url("./assets/icons/americanfootball.svg");
     }
+
     &__badminton {
-        background-image: url('./assets/icons/badminton.svg');
+      background-image: url("./assets/icons/badminton.svg");
     }
+
     &__baseball {
-        background-image: url('./assets/icons/baseball.svg');
+      background-image: url("./assets/icons/baseball.svg");
     }
+
     &__basketball {
-        background-image: url('./assets/icons/basketball.svg');
+      background-image: url("./assets/icons/basketball.svg");
     }
+
     &__beachvolley {
-        background-image: url('./assets/icons/beachvolley.svg');
+      background-image: url("./assets/icons/beachvolley.svg");
     }
+
     &__boxing {
-        background-image: url('./assets/icons/boxing.svg');
+      background-image: url("./assets/icons/boxing.svg");
     }
+
     &__casino {
-        background-image: url('./assets/icons/casino.svg');
+      background-image: url("./assets/icons/casino.svg");
     }
+
     &__cricket {
-        background-image: url('./assets/icons/cricket.svg');
+      background-image: url("./assets/icons/cricket.svg");
     }
+
     &__cycling {
-        background-image: url('./assets/icons/cycling.svg');
+      background-image: url("./assets/icons/cycling.svg");
     }
+
     &__darts {
-        background-image: url('./assets/icons/darts.svg');
+      background-image: url("./assets/icons/darts.svg");
     }
+
     &__golf {
-        background-image: url('./assets/icons/golf.svg');
+      background-image: url("./assets/icons/golf.svg");
     }
+
     &__handball {
-        background-image: url('./assets/icons/handball.svg');
+      background-image: url("./assets/icons/handball.svg");
     }
+
     &__ice-hockey {
-        background-image: url('./assets/icons/ice_hockey.svg');
+      background-image: url("./assets/icons/ice_hockey.svg");
     }
+
     &__jackpots {
-        background-image: url('./assets/icons/jackpots.svg');
+      background-image: url("./assets/icons/jackpots.svg");
     }
+
     &__mma {
-        background-image: url('./assets/icons/mma.svg');
+      background-image: url("./assets/icons/mma.svg");
     }
+
     &__motorsport {
-        background-image: url('./assets/icons/motorsport.svg');
+      background-image: url("./assets/icons/motorsport.svg");
     }
+
     &__pesapallo {
-        background-image: url('./assets/icons/pesapallo.svg');
+      background-image: url("./assets/icons/pesapallo.svg");
     }
+
     &__rugby {
-        background-image: url('./assets/icons/rugby.svg');
+      background-image: url("./assets/icons/rugby.svg");
     }
+
     &__snooker {
-        background-image: url('./assets/icons/snooker.svg');
+      background-image: url("./assets/icons/snooker.svg");
     }
+
     &__soccer {
-        background-image: url('./assets/icons/soccer.svg');
+      background-image: url("./assets/icons/soccer.svg");
     }
+
     &__tennis {
-        background-image: url('./assets/icons/tennis.svg');
+      background-image: url("./assets/icons/tennis.svg");
     }
+
     &__volley {
-        background-image: url('./assets/icons/volley.svg');
+      background-image: url("./assets/icons/volley.svg");
     }
 
-    &--sm {
-        width: map-get($icon-sizes, sm);
-        height: map-get($icon-sizes, sm);
-    }
-    
-    &--md {
-        width: map-get($icon-sizes, md);
-        height: map-get($icon-sizes, md);
-    }
-
-    &--lg {
-        width: map-get($icon-sizes, lg);
-        height: map-get($icon-sizes, lg);
-    }
-
-    &--xlg {
-        width: map-get($icon-sizes, xlg);
-        height: map-get($icon-sizes, xlg);
+    @each $icon, $val in $icon-sizes {
+      &--#{$icon} {
+        width: $val;
+        height: $val;
+      }
     }
 }

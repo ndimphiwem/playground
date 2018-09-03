@@ -200,9 +200,11 @@ $button-sizes: (
     }
   }
 
+  /** FIX: loader broken in IE
+  * fix applied: change display inline-flex to display inline-block 
+  **/
   &--loading {
-    display: inline-flex;
-    align-items: center;
+    display: inline-block;
     pointer-events: none;
 
     &::before {

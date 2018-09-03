@@ -30,7 +30,7 @@
   }
 }
 
-@mixin loader () {
+%loader {
   background: transparent;
   border: 1px solid $body-color;
   border-radius: 50%;
@@ -40,9 +40,4 @@
   display: inherit;
   margin: $loader__margin;
   padding: $loader__padding;
-}
-  
-
-%loader {
-  @include loader();
 }

@@ -200,7 +200,7 @@ $button-sizes: (
     }
   }
 
-  /** FIX: loader broken in IE
+  /** FIXME: loader broken in IE
   * fix applied: change display inline-flex to display inline-block 
   **/
   &--loading {

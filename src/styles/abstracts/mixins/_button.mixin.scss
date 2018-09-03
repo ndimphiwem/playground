@@ -41,3 +41,8 @@
   margin: $loader__margin;
   padding: $loader__padding;
 }
+
+%flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+}

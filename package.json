@@ -24,8 +24,6 @@
     "ngx-highlightjs": "^2.1.1",
     "npm": "^6.4.0",
     "rxjs": "^6.0.0",
-    "stylelint-config-recommended": "^2.1.0",
-    "stylelint-selector-bem-pattern": "^2.0.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

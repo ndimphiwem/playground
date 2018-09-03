@@ -195,15 +195,15 @@ $button-sizes: (
     $a-bw: 2px 2px 2px 0;
 
     &:before {
-      border-width: $b-bw;
       @include position(0px, auto, 0px, -9px);
+      border-width: $b-bw;
       width: $size-5;
       transform: none;
     }
 
     &:after {
-      border-width: $a-bw;
       @include position(0px);
+      border-width: $a-bw;
       width: auto;
       transform: skew(-15deg);
     }

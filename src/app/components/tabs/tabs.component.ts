@@ -1,117 +1,58 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ContentChildren, QueryList, AfterContentInit } from '@angular/core';
+// import { TabComponent } from './tab.component';
+@Component({
+  selector: 'plg-tab',
+  template: `
+  <div *ngIf="active">
+    <ng-content></ng-content>
+  </div>
+`
+})
+
+export class TabComponent {
+  @Input() title: string;
+  @Input() tabClass = 'tab-content';
+  @Input() disabled: boolean;
+  @Input() active = false;
+  @Input() linkClass = 'c-tabs__link';
+  @Input() svgType: string;
+  @Input() svgClass: string;
+}
 
 @Component({
   selector: 'plg-tabs',
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.scss']
 })
-export class TabsComponent implements OnInit {
 
-  standardTabs =  `
-<div class="col-md-3">
-  <ul class="c-tabs bg-esport">
-    <li class="c-tabs__item">
-      <a class="c-tabs__link" role="button">Tab 1</a>
-    </li>
-    <li class="c-tabs__item">
-      <a class="c-tabs__link" role="button">Tab 2</a>
-    </li>
-    <li class="c-tabs__item">
-      <a class="c-tabs__link" role="button">Tab 3</a>
-    </li>
-    <li class="c-tabs__item">
-      <a class="c-tabs__link" role="button">Tab 4</a>
-    </li>
-  </ul>
-</div>`;
-  filledTabs =  `
-<div class="col-md-3">
-  <ul class="c-tabs bg-betting">
-    <li class="c-tabs__item c-tabs__item--filled">
-      <a class="c-tabs__link" role="button">Tab 1</a>
-    </li>
-    <li class="c-tabs__item c-tabs__item--filled">
-      <a class="c-tabs__link" role="button">Tab 2</a>
-    </li>
-    <li class="c-tabs__item c-tabs__item--filled">
-      <a class="c-tabs__link" role="button">Tab 3</a>
-    </li>
-    <li class="c-tabs__item c-tabs__item--filled">
-      <a class="c-tabs__link" role="button">Tab 4</a>
-    </li>
-  </ul>
-</div>`;
-  verticalTabs =  `
-<div class="col-6 col-md-1">
-  <ul class="c-tabs c-tabs__vertical bg-secondary">
-    <li class="c-tabs__item">
-      <a class="c-tabs__link" role="button">Tab 1</a>
-    </li>
-    <li class="c-tabs__item">
-      <a class="c-tabs__link" role="button">Tab 2</a>
-    </li>
-    <li class="c-tabs__item">
-      <a class="c-tabs__link" role="button">Tab 3</a>
-    </li>
-    <li class="c-tabs__item">
-      <a class="c-tabs__link" role="button">Tab 4</a>
-    </li>
-  </ul>
-</div>`;
-  customTabs =  `
-<div class="col-md-3">
-  <ul class="c-tabs bg-vip">
-    <li class="c-tabs__item">
-      <a class="c-btn c-btn__primary" role="button">Tab 1</a>
-    </li>
-    <li class="c-tabs__item">
-      <a class="c-btn c-btn__primary" role="button">Tab 2</a>
-    </li>
-    <li class="c-tabs__item">
-      <a class="c-btn c-btn__primary" role="button">Tab 3</a>
-    </li>
-    <li class="c-tabs__item">
-      <a class="c-btn c-btn__primary" role="button">Tab 4</a>
-    </li>
-  </ul>
-</div>`;
-  customTabsFilled =  `
-<div class="col-md-3">
-  <ul class="c-tabs">
-    <li class="c-tabs__item c-tabs__item--filled">
-      <a class="c-btn c-btn__warning--outline" role="button">Tab 1</a>
-    </li>
-    <li class="c-tabs__item c-tabs__item--filled">
-      <a class="c-btn c-btn__warning--outline" role="button">Tab 2</a>
-    </li>
-    <li class="c-tabs__item c-tabs__item--filled">
-      <a class="c-btn c-btn__warning--outline" role="button">Tab 3</a>
-    </li>
-    <li class="c-tabs__item c-tabs__item--filled">
-      <a class="c-btn c-btn__warning--outline" role="button">Tab 4</a>
-    </li>
-  </ul>
-</div>`;
-  customTabsVertical =  `
-<div class="col-6 col-md-1">
-  <ul class="c-tabs c-tabs__vertical bg-secondary">
-    <li class="c-tabs__item">
-      <a class="c-btn c-btn__secondary" role="button">Tab 1</a>
-    </li>
-    <li class="c-tabs__item">
-      <a class="c-btn c-btn__secondary" role="button">Tab 2</a>
-    </li>
-    <li class="c-tabs__item">
-      <a class="c-btn c-btn__secondary" role="button">Tab 3</a>
-    </li>
-    <li class="c-tabs__item">
-      <a class="c-btn c-btn__secondary" role="button">Tab 4</a>
-    </li>
-  </ul>
-</div>`;
+export class TabsComponent implements OnInit, AfterContentInit {
+
   constructor() { }
+  activeTabs: any[];
+
+  @Input() vertical = false;
+  @Input() ulClass = 'c-tabs u-bg-secondary';
+  @Input() liClass = '';
+  @Input() anchorClass = 'c-tabs__link';
+  @Input() selectedIndex = 1;
+  @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
+
+
+  ngAfterContentInit() {
+    if (this.tabs.length) {
+      this.selectTab(this.selectedIndex);
+      console.log('vejalingo', this.tabs);
+    }
+  }
+
+  selectTab(index) {
+    if (!this.tabs.toArray()[index].disabled) {
+      this.tabs.toArray().forEach(value => value.active = false);
+      this.tabs.toArray()[index].active = true;
+    }
+  }
 
   ngOnInit() {
   }
-
 }
+

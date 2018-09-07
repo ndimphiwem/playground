@@ -1,42 +1,47 @@
 <header>
-    <div class="row no-gutters">
-        <div class="col-12">
-            <ul class="c-tabs bg-secondary">
-                <li>
-                    <a class="c-tabs__link" href="#" role="button" routerLinkActive="c-tabs__link--active" routerLink=""
-                        [routerLinkActiveOptions]="{exact: true}">Home</a>
-                </li>
-                <li>
-                    <a class="c-tabs__link" href="#" role="button" routerLinkActive="c-tabs__link--active" routerLink="grid">Grid</a>
-                </li>
-                <li>
-                    <a class="c-tabs__link" href="#" role="button" routerLinkActive="c-tabs__link--active" routerLink="button">Buttons</a>
-                </li>
-                <li>
-                    <a class="c-tabs__link" href="#" role="button" routerLinkActive="c-tabs__link--active" routerLink="typography">Typography</a>
-                </li>
-                <li>
-                    <a class="c-tabs__link" href="#" role="button" routerLinkActive="c-tabs__link--active" routerLink="forms">Forms</a>
-                </li>
-                <li>
-                    <a class="c-tabs__link" href="#" role="button" routerLinkActive="c-tabs__link--active" routerLink="panels">Panels</a>
-                </li>
-                <li>
-                    <a class="c-tabs__link" href="#" role="button" routerLinkActive="c-tabs__link--active" routerLink="cards">Cards</a>
-                </li>
-                <li>
-                    <a class="c-tabs__link" href="#" role="button" routerLinkActive="c-tabs__link--active" routerLink="images">Images</a>
-                </li>
-                <li>
-                    <a class="c-tabs__link" href="#" role="button" routerLinkActive="c-tabs__link--active" routerLink="utilities">Utilities</a>
-                </li>
-                <li>
-                    <a class="c-tabs__link" href="#" role="button" routerLinkActive="c-tabs__link--active" routerLink="tabs">Tabs</a>
-                </li>
-                <li>
-                    <a class="c-tabs__link" href="#" role="button" routerLinkActive="c-tabs__link--active" routerLink="test">Prototype Area</a>
-                </li>
-            </ul>
-        </div>
+  <div class="row no-gutters">
+    <div class="col-12">
+      <plg-tabs>
+        <plg-tab title="Home">
+          <plg-default></plg-default>
+        </plg-tab>
+        <plg-tab title="Grid">
+          <plg-grid></plg-grid>
+        </plg-tab>
+        <plg-tab title="Buttons">
+          <plg-buttons></plg-buttons>
+        </plg-tab>
+        <plg-tab title="Typography">
+          <plg-typography></plg-typography>
+        </plg-tab>
+        <plg-tab title="Forms">
+          <plg-forms></plg-forms>
+        </plg-tab>
+        <plg-tab title="Panels">
+          <plg-panels></plg-panels>
+        </plg-tab>
+        <plg-tab title="Cards">
+          <plg-cards></plg-cards>
+        </plg-tab>
+        <plg-tab title="Images">
+          <plg-images></plg-images>
+        </plg-tab>
+        <plg-tab title="Utilities">
+          <plg-utilities></plg-utilities>
+        </plg-tab>
+        <plg-tab title="Tabs">
+          <plg-tabs></plg-tabs>
+        </plg-tab>
+        <plg-tab title="Accordion">
+          <plg-accordion></plg-accordion>
+        </plg-tab>
+        <plg-tab title="Content">
+          <plg-content></plg-content>
+        </plg-tab>
+        <plg-tab title="Prototype Area">
+          <plg-test></plg-test>
+        </plg-tab>
+      </plg-tabs>
     </div>
+  </div>
 </header>

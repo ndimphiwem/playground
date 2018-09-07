@@ -4,14 +4,26 @@
 
   &--top {
     border-top: $this;
+    &-none {
+      border-top: none;
+    }
   }
   &--right {
     border-right: $this;
+    &-none {
+      border-right: none;
+    }
   }
   &--bottom {
     border-bottom: $this;
+    &-none {
+      border-bottom: none;
+    }
   }
   &--left {
     border-left: $this;
+    &-none {
+      border-left: none;
+    }
   }
 }

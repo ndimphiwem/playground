@@ -14,9 +14,12 @@ import { ModalsComponent } from './components/modals/modals.component';
 import { ImagesComponent } from './components/images/images.component';
 import { UtilitiesComponent } from './components/utilities/utilities.component';
 import { TabsComponent } from './components/tabs/tabs.component';
+import { TabComponent } from './components/tabs/tab.component';
 import { PanelsComponent } from './components/panels/panels.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { TestComponent } from './components/test/test.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
+import { ContentComponent } from './components/content/content.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +34,12 @@ import { TestComponent } from './components/test/test.component';
     ImagesComponent,
     UtilitiesComponent,
     TabsComponent,
+    TabComponent,
     PanelsComponent,
     CardsComponent,
-    TestComponent
+    TestComponent,
+    AccordionComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,

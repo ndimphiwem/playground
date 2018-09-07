@@ -12,6 +12,8 @@ import { TabsComponent } from './components/tabs/tabs.component';
 import { PanelsComponent } from './components/panels/panels.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { TestComponent } from './components/test/test.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
+import { ContentComponent } from './components/content/content.component';
 
 const routes: Routes = [
   {
@@ -57,6 +59,14 @@ const routes: Routes = [
   {
     path: 'cards',
     component: CardsComponent
+  },
+  {
+    path: 'accordion',
+    component: AccordionComponent
+  },
+  {
+    path: 'content',
+    component: ContentComponent
   },
   {
     path: 'test',

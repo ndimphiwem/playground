@@ -31,6 +31,45 @@ $button-sizes: (
     }
  }
 
+  &__grouped {
+    display: flex;
+    justify-content: flex-start;
+    > .control {
+      flex-shrink: 0;
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: $size-1;
+      }
+      &--expanded {
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+    }
+
+    &--centered {
+      justify-content: center;
+    }
+
+    &--right {
+      justify-content: flex-end;
+    }
+
+    &--multiline {
+      flex-wrap: wrap;
+      > .control {
+        &:last-child, &:not(:last-child) {
+          margin-bottom: $size-1;
+        }
+      }
+      &:last-child {
+        margin-bottom: -$size-1;
+      }
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &__default {
     background-color: $default-color;
     @include hover {

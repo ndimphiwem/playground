@@ -10,25 +10,23 @@
     width: 100%;
   }
 
-  &__is {
-    &--rounded {
-      border-radius: $radii-rounded;
-    }
-    
-    &--left {
-      float: left;
-    }
+  &--rounded {
+    border-radius: $radii-rounded;
+  }
+  
+  &--left {
+    float: left;
+  }
 
-    &--right {
-      float: right;
-    }
+  &--right {
+    float: right;
+  }
 
-    @each $dim, $val in $dimensions {
-      &--#{$val}by#{$val} {
-        $calc: $val * 1;
-        width: #{$calc}px !important;
-        height: #{$calc}px !important;
-      }
+  @each $dim, $val in $dimensions {
+    &--#{$val}*#{$val} {
+      $calc: $val * 1;
+      width: #{$calc}px !important;
+      height: #{$calc}px !important;
     }
   }
 }

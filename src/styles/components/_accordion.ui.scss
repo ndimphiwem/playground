@@ -1,0 +1,60 @@
+.c-accordion {
+  $this: &;
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  &__content {
+    max-height: 0px;
+    padding: 0px;
+    overflow: hidden;
+    transition: max-height padding .25s ease-in-out;
+  }
+
+  &__body {}
+
+  &__label {
+    display: block !important;
+    padding: $size-3;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+
+    &:hover {
+      color: darken($hover-color, 25%);
+    }
+
+    &::after {
+      content: ' ';
+      display: flow-root;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 5px solid currentColor;
+      vertical-align: middle;
+      float: right;
+      transform: translateY(-2px);
+      transition: transform .2s ease-out;
+    }
+  }
+
+  &--toggle {
+    &:checked {
+      transform: rotate(90deg) translateX(-3px);
+
+      + #{$this}__label {
+        &::after {
+          transform: rotate(90deg) translateX(-3px);
+        }
+
+        + #{$this}__content {
+          max-height: 500px;
+          padding: $size-3;
+        }
+      }
+    }
+    &:disabled {
+      + #{$this}__label {
+        background: $bg-color;
+      }
+    }
+  }
+}

@@ -1,4 +1,13 @@
-<div class="row bg-betting u-margin--btm-md">
+<ul [ngClass]="ulClass">
+    <li *ngFor="let tab of tabs; let i = index" (click)="selectTab(i)" [ngClass]="liClass">
+      <a routerLink="./" [ngClass]="anchorClass" [class.c-tabs__link--active]="tab.active" [class.disabled]="tab.disabled">
+        {{tab.title}}
+      </a>
+    </li>
+  </ul>
+  <ng-content></ng-content>
+
+<!-- <div class="row u-bg-primary u-margin--btm-md">
   <div class="col-12">
     <h1 class="u-has-font--bolder u-is--uppercase u-padding--sm">Tabs</h1>
   </div>
@@ -13,7 +22,8 @@
     <h2>Standard tabs</h2>
   </div>
   <div class="col-md-3">
-    <ul class="c-tabs bg-secondary">
+
+    <ul class="c-tabs u-bg-secondary">
       <li class="c-tabs__item">
         <a class="c-tabs__link" role="button">Tab 1</a>
       </li>
@@ -39,7 +49,7 @@
     </h2>
   </div>
   <div class="col-md-3">
-    <ul class="c-tabs bg-secondary">
+    <ul class="c-tabs u-bg-secondary">
       <li class="c-tabs__item c-tabs__item--filled">
         <a class="c-tabs__link" role="button">Tab 1</a>
       </li>
@@ -63,7 +73,7 @@
     <h2>Vertical tabs</h2>
   </div>
   <div class="col-6 col-md-1">
-    <ul class="c-tabs c-tabs__vertical bg-secondary">
+    <ul class="c-tabs c-tabs__vertical u-bg-secondary">
       <li class="c-tabs__item">
         <a class="c-tabs__link" role="button">Tab 1</a>
       </li>
@@ -92,7 +102,7 @@
     <h2>Tabs using buttons instead of tab links</h2>
     <div class="row u-margin--btm-md no-gutters">
       <div class="col-md-3">
-        <ul class="c-tabs  bg-secondary">
+        <ul class="c-tabs  u-bg-secondary">
           <li class="c-tabs__item">
             <a class="c-btn c-btn__primary" role="button">Tab 1</a>
           </li>
@@ -134,7 +144,7 @@
     </div>
     <div class="row u-margin--btm-md no-gutters">
       <div class="col-6 col-md-1">
-        <ul class="c-tabs c-tabs__vertical bg-secondary">
+        <ul class="c-tabs c-tabs__vertical u-bg-secondary">
           <li class="c-tabs__item">
             <a class="c-btn c-btn__secondary" role="button">Tab 1</a>
           </li>
@@ -154,4 +164,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

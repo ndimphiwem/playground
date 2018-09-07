@@ -1,9 +1,9 @@
 @each $name, $val in $theming {
-  .bg-#{$name} {
+  .u-bg-#{$name} {
     background-color: $val;
   }
 
-  .text__#{$name} {
+  .u-text-#{$name} {
     color: $val;
 
     &--lighten {

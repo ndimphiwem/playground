@@ -31,6 +31,45 @@ $button-sizes: (
     }
  }
 
+  &__grouped {
+    display: flex;
+    justify-content: flex-start;
+    > .control {
+      flex-shrink: 0;
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: $size-1;
+      }
+      &--expanded {
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+    }
+
+    &--centered {
+      justify-content: center;
+    }
+
+    &--right {
+      justify-content: flex-end;
+    }
+
+    &--multiline {
+      flex-wrap: wrap;
+      > .control {
+        &:last-child, &:not(:last-child) {
+          margin-bottom: $size-1;
+        }
+      }
+      &:last-child {
+        margin-bottom: -$size-1;
+      }
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &__default {
     background-color: $default-color;
     @include hover {
@@ -139,12 +178,24 @@ $button-sizes: (
     // }
   }
 
+
+  /** FIX: feed button, smaller devices, misaligned text **/
   &__feed {
     display: flex;
-    @extend .u-grid-justify--between;
+    @extend %flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     width: 100%;
     padding: $size-0 $size-0;
     background-color: $faded-green;
+
+    &--item {
+      background-color: red;
+      &:nth-child(2) {
+        background-color: green;
+      }
+    }
   }
 
   &__input {
@@ -186,23 +237,25 @@ $button-sizes: (
     $a-bw: 2px 2px 2px 0;
 
     &:before {
-      border-width: $b-bw;
       @include position(0px, auto, 0px, -9px);
+      border-width: $b-bw;
       width: $size-5;
       transform: none;
     }
 
     &:after {
-      border-width: $a-bw;
       @include position(0px);
+      border-width: $a-bw;
       width: auto;
       transform: skew(-15deg);
     }
   }
 
+  /** FIXME: loader broken in IE
+  * fix applied: change display inline-flex to display inline-block 
+  **/
   &--loading {
-    display: inline-flex;
-    align-items: center;
+    display: inline-block;
     pointer-events: none;
 
     &::before {
